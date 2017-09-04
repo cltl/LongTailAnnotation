@@ -6,7 +6,7 @@ var LocalStrategy = require('passport-local').Strategy
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var glob = require('glob');
 var passport = require('passport');
 var expressSession = require('express-session');
 
@@ -42,6 +42,33 @@ app.get('/mentions', isAuthenticated, function(req, res){
 
 app.get('/structured', isAuthenticated, function(req, res){
     res.sendFile('structured.html', {root:'./client'});
+});
+
+app.get('/gettext', isAuthenticated, function(req, res){
+    var j = {"doc1":{"1": "hellow", "2": "world"}, "doc2": {"1": "i", "2": "am", "3": "ready"}};
+/*
+    fs.createReadStream(req.filename)
+    .pipe(csv())
+    .on("data", function(data){
+        console.log(data);
+    })
+    .on("end", function(){
+        console.log("done");
+    });
+*/
+    res.send(j);
+});
+
+app.get('/listfiles', isAuthenticated, function(req, res){
+    glob("data/CONLL/*.conll", function (er, files) { res.send(files);});
+});
+
+app.get('/gettokens', isAuthenticated, function(req, res){
+// todo : fill
+});
+
+app.get('/getstrdata', isAuthenticated, function(req, res){
+// todo : fill
 });
 
 passport.use(new LocalStrategy(

@@ -5,9 +5,19 @@
 </head>
 <body>
 <h2>Long Tail Annotation Tool: Mention Annotation</h2>
-<a href="/dash">Back to dashboard</a>
+<div class="row">
+    <select id="pickfile">
+        <option value="-1">-Please pick a file-</option>
+    </select>
+    <button class="btn btn-primary btn-ann" onclick="updateTexts()">Show texts</button>
+    <button onclick="showSelected()">Show selected</button>
+</div>
+<div id="bigdiv"></div>
+<div class="row">
+    <a href="/dash">Back to dashboard</a>
+    <button class="btn btn-primary btn-ann" onclick="location.href='/logout'">Logout</button>
+</div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="/main.js"></script>
-<button class="btn btn-primary btn-ann" onclick="location.href='/logout'">Logout</button>
+<script type="text/javascript" src="/annotations.js"></script>
 </body>
 </html>

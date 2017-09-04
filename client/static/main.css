@@ -4,6 +4,10 @@ html,body{
     height: 100%;
 }
 
+.active {
+    background: #0f0;
+}
+
 .login-container{
     position: relative;
     width: 300px;
@@ -99,6 +103,7 @@ html,body{
     width: 45%;
     background: #00a0df;
     color: #ffffff;
+    max-width:100px;
 }
 
 .animated {

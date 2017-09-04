@@ -1,0 +1,5161 @@
+{
+    "2-6869": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Tennessee', 'Memphis') (city) ?"
+    },
+    "2-6871": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Houston"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Texas', 'Houston') (city) ?"
+    },
+    "2-6872": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Houston"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Texas', 'Houston') (city) ?"
+    },
+    "2-6874": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-6876": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-6878": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Detroit"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Michigan', 'Detroit') (city) ?"
+    },
+    "2-6879": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-6880": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Wichita,_Kansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Kansas', 'Wichita') (city) ?"
+    },
+    "2-6881": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Penile,_Louisville"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Kentucky', 'Louisville') (city) ?"
+    },
+    "2-6884": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Cleveland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Ohio', 'Cleveland') (city) ?"
+    },
+    "2-6890": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "12/03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 12/03/2017 (day) in ('Pennsylvania',) (state) ?"
+    },
+    "2-6893": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Michigan"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "18/03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 18/03/2017 (day) in ('Michigan',) (state) ?"
+    },
+    "2-6894": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "14/01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 14/01/2017 (day) in ('Tennessee',) (state) ?"
+    },
+    "2-6900": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Illinois',) (state) ?"
+    },
+    "2-6901": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_York"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('New York',) (state) ?"
+    },
+    "2-6902": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Kansas',) (state) ?"
+    },
+    "2-6903": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Missouri"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Missouri',) (state) ?"
+    },
+    "2-6904": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kentucky"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Kentucky',) (state) ?"
+    },
+    "2-6905": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Tennessee',) (state) ?"
+    },
+    "2-6906": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Ohio',) (state) ?"
+    },
+    "2-6908": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('North Carolina',) (state) ?"
+    },
+    "2-6909": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kentucky"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Kentucky',) (state) ?"
+    },
+    "2-6910": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Mississippi',) (state) ?"
+    },
+    "2-6913": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Maryland',) (state) ?"
+    },
+    "2-6915": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Pennsylvania',) (state) ?"
+    },
+    "2-6916": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Nevada"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Nevada',) (state) ?"
+    },
+    "2-6917": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Virginia',) (state) ?"
+    },
+    "2-6918": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Michigan"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Michigan',) (state) ?"
+    },
+    "2-6919": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Mississippi',) (state) ?"
+    },
+    "2-6920": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Indiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Indiana',) (state) ?"
+    },
+    "2-6921": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('California',) (state) ?"
+    },
+    "2-6922": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Louisiana',) (state) ?"
+    },
+    "2-6923": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Florida',) (state) ?"
+    },
+    "2-6924": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Alabama',) (state) ?"
+    },
+    "2-6925": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Nevada"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Nevada',) (state) ?"
+    },
+    "2-6928": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Arizona',) (state) ?"
+    },
+    "2-6929": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Louisiana',) (state) ?"
+    },
+    "2-6930": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Wisconsin"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Wisconsin',) (state) ?"
+    },
+    "2-6931": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Texas',) (state) ?"
+    },
+    "2-6933": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('California',) (state) ?"
+    },
+    "2-6935": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Louisiana',) (state) ?"
+    },
+    "2-6936": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Colorado"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Colorado',) (state) ?"
+    },
+    "2-6937": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Idaho"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Idaho',) (state) ?"
+    },
+    "2-6938": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Florida',) (state) ?"
+    },
+    "2-6939": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Georgia_(U.S._state)"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('Georgia',) (state) ?"
+    },
+    "2-6941": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Virginia',) (state) ?"
+    },
+    "2-6943": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Wisconsin"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Wisconsin',) (state) ?"
+    },
+    "2-6944": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arkansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Arkansas',) (state) ?"
+    },
+    "2-6947": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Maryland',) (state) ?"
+    },
+    "2-6948": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Ohio',) (state) ?"
+    },
+    "2-6951": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Illinois',) (state) ?"
+    },
+    "2-6952": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Oklahoma"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Oklahoma',) (state) ?"
+    },
+    "2-6953": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Alabama',) (state) ?"
+    },
+    "2-6954": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Missouri"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Missouri',) (state) ?"
+    },
+    "2-6957": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Texas',) (state) ?"
+    },
+    "2-6959": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Arizona',) (state) ?"
+    },
+    "2-6962": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) in ('California',) (state) ?"
+    },
+    "2-6963": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Oklahoma"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) in ('Oklahoma',) (state) ?"
+    },
+    "2-6965": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('North Carolina',) (state) ?"
+    },
+    "2-6966": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) in ('Illinois',) (state) ?"
+    },
+    "2-6968": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Downtown_Orlando"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Florida', 'Orlando') (city) ?"
+    },
+    "2-6970": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Reno,_Nevada"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Nevada', 'Reno') (city) ?"
+    },
+    "2-6972": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Nashville,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Tennessee', 'Antioch') (city) ?"
+    },
+    "2-6975": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-6976": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Savannah,_Georgia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Georgia', 'Savannah') (city) ?"
+    },
+    "2-6977": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Salinas,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('California', 'Salinas') (city) ?"
+    },
+    "2-6979": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Illinois', 'Chicago (Englewood)') (city) ?"
+    },
+    "2-6981": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Penile,_Louisville"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Kentucky', 'Louisville') (city) ?"
+    },
+    "2-6982": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Tennessee', 'Memphis') (city) ?"
+    },
+    "2-6983": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Cincinnati"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Ohio', 'Cincinnati') (city) ?"
+    },
+    "2-6986": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Philadelphia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Pennsylvania', 'Philadelphia') (city) ?"
+    },
+    "2-6988": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Newark,_New_Jersey"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('New Jersey', 'Newark') (city) ?"
+    },
+    "2-6989": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Houston"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Texas', 'Houston') (city) ?"
+    },
+    "2-6990": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Aetna_(Gary)"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Indiana', 'Gary') (city) ?"
+    },
+    "2-6993": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Oklahoma_City"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Oklahoma', 'Oklahoma City') (city) ?"
+    },
+    "2-6994": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Detroit"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Michigan', 'Detroit') (city) ?"
+    },
+    "2-6995": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Dallas"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Texas', 'Dallas') (city) ?"
+    },
+    "2-6997": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Hayward,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('California', 'Hayward') (city) ?"
+    },
+    "2-6999": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/Fort_Lauderdale,_Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Florida', 'Fort Lauderdale') (city) ?"
+    },
+    "2-7004": {
+        "event_type": "killing",
+        "location": {
+            "city": "http://dbpedia.org/resource/South_Bend,_Indiana"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Indiana', 'South Bend') (city) ?"
+    },
+    "2-7010": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/South_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('South Carolina',) (state) ?"
+    },
+    "2-7011": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Wisconsin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Wisconsin',) (state) ?"
+    },
+    "2-7012": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Colorado"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Colorado',) (state) ?"
+    },
+    "2-7013": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Florida',) (state) ?"
+    },
+    "2-7015": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_York"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('New York',) (state) ?"
+    },
+    "2-7016": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Georgia_(U.S._state)"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Georgia',) (state) ?"
+    },
+    "2-7017": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Missouri"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Missouri',) (state) ?"
+    },
+    "2-7019": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Idaho"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Idaho',) (state) ?"
+    },
+    "2-7021": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('California',) (state) ?"
+    },
+    "2-7022": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Maryland',) (state) ?"
+    },
+    "2-7024": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Arizona',) (state) ?"
+    },
+    "2-7025": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Ohio',) (state) ?"
+    },
+    "2-7026": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('North Carolina',) (state) ?"
+    },
+    "2-7027": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Oklahoma"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Oklahoma',) (state) ?"
+    },
+    "2-7028": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Virginia',) (state) ?"
+    },
+    "2-7029": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kentucky"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Kentucky',) (state) ?"
+    },
+    "2-7030": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Louisiana',) (state) ?"
+    },
+    "2-7031": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Mississippi',) (state) ?"
+    },
+    "2-7033": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Tennessee',) (state) ?"
+    },
+    "2-7035": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Pennsylvania',) (state) ?"
+    },
+    "2-7037": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Michigan"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Michigan',) (state) ?"
+    },
+    "2-7038": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Alabama',) (state) ?"
+    },
+    "2-7039": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) in ('Illinois',) (state) ?"
+    },
+    "2-7043": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Monica"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Monica (first) ?"
+    },
+    "2-7044": {
+        "event_type": "killing",
+        "participant": {
+            "first": "John"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name John (first) ?"
+    },
+    "2-7051": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Corey"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Corey (first) ?"
+    },
+    "2-7055": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Christopher"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Christopher (first) ?"
+    },
+    "2-7059": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Dominique"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Dominique (first) ?"
+    },
+    "2-7060": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Jonathan"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Jonathan (first) ?"
+    },
+    "2-7065": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Kevin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Kevin (first) ?"
+    },
+    "2-7069": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Emmanuel"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Emmanuel (first) ?"
+    },
+    "2-7071": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Jessie"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Jessie (first) ?"
+    },
+    "2-7074": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Sean"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Sean (first) ?"
+    },
+    "2-7076": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Keith"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Keith (first) ?"
+    },
+    "2-7084": {
+        "event_type": "killing",
+        "participant": {
+            "first": "James"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name James (first) ?"
+    },
+    "2-7085": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Tiffany"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Tiffany (first) ?"
+    },
+    "2-7090": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Brandon"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Brandon (first) ?"
+    },
+    "2-7093": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Jordan"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Jordan (first) ?"
+    },
+    "2-7096": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Derrick"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Derrick (first) ?"
+    },
+    "2-7098": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Shirley"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Shirley (first) ?"
+    },
+    "2-7101": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Julian"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Julian (first) ?"
+    },
+    "2-7108": {
+        "event_type": "killing",
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name David (first) ?"
+    },
+    "2-7110": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Adrian"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Adrian (first) ?"
+    },
+    "2-7112": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Christian"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Christian (first) ?"
+    },
+    "2-7117": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Joshua"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Joshua (first) ?"
+    },
+    "2-7120": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Justin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Justin (first) ?"
+    },
+    "2-7126": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Michael (first) ?"
+    },
+    "2-7131": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Eduardo"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Eduardo (first) ?"
+    },
+    "2-7136": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Robert"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Robert (first) ?"
+    },
+    "2-7138": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Branch"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Branch (last) ?"
+    },
+    "2-7140": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Smith"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Smith (last) ?"
+    },
+    "2-7147": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Wright"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Wright (last) ?"
+    },
+    "2-7150": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Johnson (last) ?"
+    },
+    "2-7152": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Allen"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Allen (last) ?"
+    },
+    "2-7156": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Gonzalez"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Gonzalez (last) ?"
+    },
+    "2-7159": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Johnson (last) ?"
+    },
+    "2-7163": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Taylor"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Taylor (last) ?"
+    },
+    "2-7166": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Davis"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Davis (last) ?"
+    },
+    "2-7170": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Williams"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Williams (last) ?"
+    },
+    "2-7171": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Davis"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Davis (last) ?"
+    },
+    "2-7175": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Smith"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Smith (last) ?"
+    },
+    "2-7177": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Jackson"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Jackson (last) ?"
+    },
+    "2-7180": {
+        "event_type": "killing",
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "11/01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 11/01/2017 (day) that involve the name David (first) ?"
+    },
+    "2-7184": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Williams"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Williams (last) ?"
+    },
+    "2-7195": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Johnson (last) ?"
+    },
+    "2-7197": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Hamilton"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Hamilton (last) ?"
+    },
+    "2-7200": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Jackson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Jackson (last) ?"
+    },
+    "2-7205": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Holmes"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Holmes (last) ?"
+    },
+    "2-7206": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Harris"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Harris (last) ?"
+    },
+    "2-7208": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Wesley"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Wesley (last) ?"
+    },
+    "2-7215": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Lewis"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Lewis (last) ?"
+    },
+    "2-7223": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Carter"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Carter (last) ?"
+    },
+    "2-7227": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Smith"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Smith (last) ?"
+    },
+    "2-7231": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Gonzalez"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Gonzalez (last) ?"
+    },
+    "2-7235": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Brown"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Brown (last) ?"
+    },
+    "2-7243": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Davis"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Davis (last) ?"
+    },
+    "2-7248": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Nelson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Nelson (last) ?"
+    },
+    "2-7250": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Rodriguez"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Rodriguez (last) ?"
+    },
+    "2-7252": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Allen"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Allen (last) ?"
+    },
+    "2-7255": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Walker"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Walker (last) ?"
+    },
+    "2-7259": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Jones"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Jones (last) ?"
+    },
+    "2-7261": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Barber"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Barber (last) ?"
+    },
+    "2-7263": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Coleman"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Coleman (last) ?"
+    },
+    "2-7265": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Kevin"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Kevin (first) ?"
+    },
+    "2-7269": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Derrick"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Derrick (first) ?"
+    },
+    "2-7274": {
+        "event_type": "killing",
+        "participant": {
+            "first": "James"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name James (first) ?"
+    },
+    "2-7276": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Antonio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Antonio (first) ?"
+    },
+    "2-7277": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Michael (first) ?"
+    },
+    "2-7285": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Michael (first) ?"
+    },
+    "2-7289": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Christopher"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Christopher (first) ?"
+    },
+    "2-7294": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Anthony"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Anthony (first) ?"
+    },
+    "2-7300": {
+        "event_type": "killing",
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name David (first) ?"
+    },
+    "2-7301": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Kevin"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Kevin (first) ?"
+    },
+    "2-7306": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "participant": {
+            "last": "Gonzalez"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['killing'] events happened in ('Illinois',) (state) that involve the name Gonzalez (last) ?"
+    },
+    "2-7310": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "participant": {
+            "first": "Robert"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['killing'] events happened in ('Texas',) (state) that involve the name Robert (first) ?"
+    },
+    "2-7311": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['killing'] events happened in ('Florida',) (state) that involve the name Michael (first) ?"
+    },
+    "2-7312": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['killing'] events happened in ('Ohio',) (state) that involve the name David (first) ?"
+    },
+    "2-7315": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Houston"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Texas', 'Houston') (city) ?"
+    },
+    "2-7316": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Toledo,_Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Ohio', 'Toledo') (city) ?"
+    },
+    "2-7317": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/New_Orleans"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Louisiana', 'New Orleans') (city) ?"
+    },
+    "2-7320": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Cincinnati"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Ohio', 'Cincinnati') (city) ?"
+    },
+    "2-7322": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Jacksonville,_Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Florida', 'Jacksonville') (city) ?"
+    },
+    "2-7326": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Knoxville,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Tennessee', 'Knoxville') (city) ?"
+    },
+    "2-7327": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Durham,_North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('North Carolina', 'Durham') (city) ?"
+    },
+    "2-7328": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-7329": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Newport_News,_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Virginia', 'Newport News') (city) ?"
+    },
+    "2-7330": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-7331": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Downtown_Orlando"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Florida', 'Orlando') (city) ?"
+    },
+    "2-7334": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Uptown_Oakland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('California', 'Oakland') (city) ?"
+    },
+    "2-7335": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Penile,_Louisville"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Kentucky', 'Louisville') (city) ?"
+    },
+    "2-7337": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Philadelphia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Pennsylvania', 'Philadelphia') (city) ?"
+    },
+    "2-7338": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-7339": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Washington_metropolitan_area"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('District of Columbia', 'Washington') (city) ?"
+    },
+    "2-7340": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Baltimore"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Maryland', 'Baltimore') (city) ?"
+    },
+    "2-7341": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Tennessee', 'Memphis') (city) ?"
+    },
+    "2-7345": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Baltimore"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Maryland', 'Baltimore') (city) ?"
+    },
+    "2-7347": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Jacksonville,_Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Florida', 'Jacksonville') (city) ?"
+    },
+    "2-7349": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Atlanta"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Georgia', 'Atlanta') (city) ?"
+    },
+    "2-7350": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Detroit"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Michigan', 'Detroit') (city) ?"
+    },
+    "2-7351": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Jackson,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Tennessee', 'Jackson') (city) ?"
+    },
+    "2-7352": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Savannah,_Georgia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Georgia', 'Savannah') (city) ?"
+    },
+    "2-7357": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Fort_Worth,_Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Texas', 'Fort Worth') (city) ?"
+    },
+    "2-7358": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Miami"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Florida', 'Miami') (city) ?"
+    },
+    "2-7359": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Tennessee', 'Memphis') (city) ?"
+    },
+    "2-7360": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Shreveport,_Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Louisiana', 'Shreveport') (city) ?"
+    },
+    "2-7362": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Philadelphia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Pennsylvania', 'Philadelphia') (city) ?"
+    },
+    "2-7364": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Sanford,_Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Florida', 'Sanford') (city) ?"
+    },
+    "2-7365": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Miami"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Florida', 'Miami') (city) ?"
+    },
+    "2-7367": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Penile,_Louisville"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Kentucky', 'Louisville') (city) ?"
+    },
+    "2-7370": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chattanooga,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Tennessee', 'Chattanooga') (city) ?"
+    },
+    "2-7374": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arkansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Arkansas',) (state) ?"
+    },
+    "2-7375": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Pennsylvania',) (state) ?"
+    },
+    "2-7376": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Kansas',) (state) ?"
+    },
+    "2-7377": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Virginia',) (state) ?"
+    },
+    "2-7378": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Connecticut"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Connecticut',) (state) ?"
+    },
+    "2-7380": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('California',) (state) ?"
+    },
+    "2-7381": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('North Carolina',) (state) ?"
+    },
+    "2-7382": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Maryland',) (state) ?"
+    },
+    "2-7383": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Illinois',) (state) ?"
+    },
+    "2-7384": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Illinois',) (state) ?"
+    },
+    "2-7385": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_Jersey"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('New Jersey',) (state) ?"
+    },
+    "2-7388": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Ohio',) (state) ?"
+    },
+    "2-7389": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Florida',) (state) ?"
+    },
+    "2-7390": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Texas',) (state) ?"
+    },
+    "2-7393": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/West_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('West Virginia',) (state) ?"
+    },
+    "2-7394": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Oklahoma"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Oklahoma',) (state) ?"
+    },
+    "2-7395": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Arizona',) (state) ?"
+    },
+    "2-7397": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_York"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('New York',) (state) ?"
+    },
+    "2-7398": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Alabama',) (state) ?"
+    },
+    "2-7399": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Colorado"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Colorado',) (state) ?"
+    },
+    "2-7400": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kentucky"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Kentucky',) (state) ?"
+    },
+    "2-7402": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Tennessee',) (state) ?"
+    },
+    "2-7403": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Connecticut"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Connecticut',) (state) ?"
+    },
+    "2-7405": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Missouri"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Missouri',) (state) ?"
+    },
+    "2-7407": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Tennessee',) (state) ?"
+    },
+    "2-7410": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Louisiana',) (state) ?"
+    },
+    "2-7412": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Washington_(state)"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Washington',) (state) ?"
+    },
+    "2-7414": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Pennsylvania',) (state) ?"
+    },
+    "2-7415": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Maryland',) (state) ?"
+    },
+    "2-7416": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Arizona',) (state) ?"
+    },
+    "2-7417": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('North Carolina',) (state) ?"
+    },
+    "2-7418": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Virginia',) (state) ?"
+    },
+    "2-7419": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Alabama',) (state) ?"
+    },
+    "2-7420": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Nevada"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Nevada',) (state) ?"
+    },
+    "2-7421": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Florida',) (state) ?"
+    },
+    "2-7422": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('California',) (state) ?"
+    },
+    "2-7423": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Colorado"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Colorado',) (state) ?"
+    },
+    "2-7424": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Texas',) (state) ?"
+    },
+    "2-7425": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Wisconsin"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Wisconsin',) (state) ?"
+    },
+    "2-7426": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arkansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Arkansas',) (state) ?"
+    },
+    "2-7427": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Florida',) (state) ?"
+    },
+    "2-7428": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Oklahoma"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Oklahoma',) (state) ?"
+    },
+    "2-7431": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Illinois',) (state) ?"
+    },
+    "2-7432": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_York"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('New York',) (state) ?"
+    },
+    "2-7433": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Washington_(state)"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Washington',) (state) ?"
+    },
+    "2-7435": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Maryland',) (state) ?"
+    },
+    "2-7436": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Louisiana',) (state) ?"
+    },
+    "2-7437": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_Mexico"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('New Mexico',) (state) ?"
+    },
+    "2-7439": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Georgia_(U.S._state)"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Georgia',) (state) ?"
+    },
+    "2-7440": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Ohio',) (state) ?"
+    },
+    "2-7441": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Texas',) (state) ?"
+    },
+    "2-7444": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Pennsylvania',) (state) ?"
+    },
+    "2-7445": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Mississippi',) (state) ?"
+    },
+    "2-7446": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Georgia_(U.S._state)"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Georgia',) (state) ?"
+    },
+    "2-7448": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Tennessee',) (state) ?"
+    },
+    "2-7450": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Mississippi',) (state) ?"
+    },
+    "2-7457": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Michigan"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Michigan',) (state) ?"
+    },
+    "2-7459": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Louisiana',) (state) ?"
+    },
+    "2-7460": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Indiana"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Indiana',) (state) ?"
+    },
+    "2-7461": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Nevada"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Nevada',) (state) ?"
+    },
+    "2-7462": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('California',) (state) ?"
+    },
+    "2-7465": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_Jersey"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('New Jersey',) (state) ?"
+    },
+    "2-7466": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kansas"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) in ('Kansas',) (state) ?"
+    },
+    "2-7467": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Alabama',) (state) ?"
+    },
+    "2-7468": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Ohio',) (state) ?"
+    },
+    "2-7469": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "16/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 16/01/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7472": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "04/02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 04/02/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7474": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "29/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 29/01/2017 (day) in ('Louisiana',) (state) ?"
+    },
+    "2-7475": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "07/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 07/01/2017 (day) in ('Ohio',) (state) ?"
+    },
+    "2-7476": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "19/02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 19/02/2017 (day) in ('California',) (state) ?"
+    },
+    "2-7477": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "03/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/03/2017 (day) in ('Pennsylvania',) (state) ?"
+    },
+    "2-7478": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Georgia_(U.S._state)"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "05/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 05/03/2017 (day) in ('Georgia',) (state) ?"
+    },
+    "2-7479": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "05/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 05/03/2017 (day) in ('California',) (state) ?"
+    },
+    "2-7480": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "01/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/01/2017 (day) in ('Texas',) (state) ?"
+    },
+    "2-7482": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arkansas"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "15/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 15/03/2017 (day) in ('Arkansas',) (state) ?"
+    },
+    "2-7486": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "13/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 13/03/2017 (day) in ('Tennessee',) (state) ?"
+    },
+    "2-7488": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "03/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/01/2017 (day) in ('Illinois',) (state) ?"
+    },
+    "2-7489": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "19/02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 19/02/2017 (day) in ('Tennessee',) (state) ?"
+    },
+    "2-7490": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "22/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 22/03/2017 (day) in ('Tennessee',) (state) ?"
+    },
+    "2-7492": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "21/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 21/01/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7494": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "07/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 07/03/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7496": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_Jersey"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "11/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 11/01/2017 (day) in ('New Jersey',) (state) ?"
+    },
+    "2-7499": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "10/02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 10/02/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7501": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_York"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "16/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 16/03/2017 (day) in ('New York',) (state) ?"
+    },
+    "2-7502": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "08/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 08/03/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7503": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "06/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 06/03/2017 (day) in ('Ohio',) (state) ?"
+    },
+    "2-7504": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "07/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 07/03/2017 (day) in ('Tennessee',) (state) ?"
+    },
+    "2-7506": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "23/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 23/03/2017 (day) in ('Florida',) (state) ?"
+    },
+    "2-7508": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "11/02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 11/02/2017 (day) in ('Tennessee',) (state) ?"
+    },
+    "2-7510": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Seminole,_Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Florida', 'Seminole') (city) ?"
+    },
+    "2-7511": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Jacksonville,_Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Florida', 'Jacksonville') (city) ?"
+    },
+    "2-7512": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Norfolk,_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Virginia', 'Norfolk') (city) ?"
+    },
+    "2-7513": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Knoxville,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Tennessee', 'Knoxville') (city) ?"
+    },
+    "2-7515": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Warren,_Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Ohio', 'Warren') (city) ?"
+    },
+    "2-7516": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Birmingham,_Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Alabama', 'Birmingham') (city) ?"
+    },
+    "2-7517": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Salinas,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California', 'Salinas') (city) ?"
+    },
+    "2-7519": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Downtown_Orlando"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Florida', 'Orlando') (city) ?"
+    },
+    "2-7520": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Shreveport,_Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Louisiana', 'Shreveport') (city) ?"
+    },
+    "2-7521": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Milwaukee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Wisconsin', 'Milwaukee') (city) ?"
+    },
+    "2-7522": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/North_Charleston,_South_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('South Carolina', 'North Charleston') (city) ?"
+    },
+    "2-7523": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Aetna_(Gary)"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Indiana', 'Gary') (city) ?"
+    },
+    "2-7524": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Boulder,_Colorado"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Colorado', 'Boulder') (city) ?"
+    },
+    "2-7525": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Kansas_City,_Missouri"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Missouri', 'Kansas City') (city) ?"
+    },
+    "2-7526": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Penile,_Louisville"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Kentucky', 'Louisville') (city) ?"
+    },
+    "2-7527": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/New_Orleans"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Louisiana', 'New Orleans') (city) ?"
+    },
+    "2-7528": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Savannah,_Georgia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Georgia', 'Savannah') (city) ?"
+    },
+    "2-7529": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Little_Rock,_Arkansas"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Arkansas', 'Little Rock') (city) ?"
+    },
+    "2-7530": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Columbus,_Georgia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Georgia', 'Columbus') (city) ?"
+    },
+    "2-7531": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Columbus,_Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Ohio', 'Columbus') (city) ?"
+    },
+    "2-7533": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Philadelphia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Pennsylvania', 'Philadelphia') (city) ?"
+    },
+    "2-7537": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Santa_Ana,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California', 'Santa Ana') (city) ?"
+    },
+    "2-7538": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/San_Antonio"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Texas', 'San Antonio') (city) ?"
+    },
+    "2-7541": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Murfreesboro,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Tennessee', 'Murfreesboro') (city) ?"
+    },
+    "2-7542": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Detroit"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Michigan', 'Detroit') (city) ?"
+    },
+    "2-7543": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Richmond,_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Virginia', 'Richmond') (city) ?"
+    },
+    "2-7544": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-7545": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Houston"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Texas', 'Houston') (city) ?"
+    },
+    "2-7546": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Uptown_Oakland"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California', 'Oakland') (city) ?"
+    },
+    "2-7548": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Sacramento,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California', 'Sacramento') (city) ?"
+    },
+    "2-7551": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Indianapolis"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Indiana', 'Indianapolis') (city) ?"
+    },
+    "2-7552": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Newport_News,_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Virginia', 'Newport News') (city) ?"
+    },
+    "2-7555": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Oklahoma_City"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Oklahoma', 'Oklahoma City') (city) ?"
+    },
+    "2-7557": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Virginia_Beach,_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Virginia', 'Virginia Beach') (city) ?"
+    },
+    "2-7558": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Atlanta"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Georgia', 'Atlanta') (city) ?"
+    },
+    "2-7559": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Fresno,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California', 'Fresno') (city) ?"
+    },
+    "2-7560": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Cincinnati"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Ohio', 'Cincinnati') (city) ?"
+    },
+    "2-7561": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Baton_Rouge,_Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Louisiana', 'Baton Rouge') (city) ?"
+    },
+    "2-7562": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Tennessee', 'Memphis') (city) ?"
+    },
+    "2-7563": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Allentown,_Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Pennsylvania', 'Allentown') (city) ?"
+    },
+    "2-7564": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/New_Tampa"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Florida', 'Tampa') (city) ?"
+    },
+    "2-7566": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Nashville,_Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Tennessee', 'Nashville') (city) ?"
+    },
+    "2-7568": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Phoenix,_Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Arizona', 'Phoenix') (city) ?"
+    },
+    "2-7571": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Mobile,_Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Alabama', 'Mobile') (city) ?"
+    },
+    "2-7573": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Dallas"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Texas', 'Dallas') (city) ?"
+    },
+    "2-7575": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Durham,_North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('North Carolina', 'Durham') (city) ?"
+    },
+    "2-7576": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Indio,_California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California', 'Indio') (city) ?"
+    },
+    "2-7577": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Iowa"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Iowa',) (state) ?"
+    },
+    "2-7578": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Mississippi',) (state) ?"
+    },
+    "2-7579": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/North_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('North Carolina',) (state) ?"
+    },
+    "2-7582": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Nevada"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Nevada',) (state) ?"
+    },
+    "2-7583": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/South_Carolina"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('South Carolina',) (state) ?"
+    },
+    "2-7584": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alabama"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Alabama',) (state) ?"
+    },
+    "2-7585": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Louisiana"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Louisiana',) (state) ?"
+    },
+    "2-7586": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Michigan"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Michigan',) (state) ?"
+    },
+    "2-7587": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Pennsylvania"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Pennsylvania',) (state) ?"
+    },
+    "2-7588": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Connecticut"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Connecticut',) (state) ?"
+    },
+    "2-7589": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Virginia',) (state) ?"
+    },
+    "2-7590": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Massachusetts"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Massachusetts',) (state) ?"
+    },
+    "2-7591": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Colorado"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Colorado',) (state) ?"
+    },
+    "2-7592": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Missouri"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Missouri',) (state) ?"
+    },
+    "2-7593": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_York"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('New York',) (state) ?"
+    },
+    "2-7594": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arkansas"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Arkansas',) (state) ?"
+    },
+    "2-7595": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Washington_(state)"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Washington',) (state) ?"
+    },
+    "2-7596": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Illinois',) (state) ?"
+    },
+    "2-7598": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Ohio',) (state) ?"
+    },
+    "2-7599": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/California"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('California',) (state) ?"
+    },
+    "2-7601": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Oklahoma"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Oklahoma',) (state) ?"
+    },
+    "2-7603": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Maryland',) (state) ?"
+    },
+    "2-7604": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kansas"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Kansas',) (state) ?"
+    },
+    "2-7605": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_Mexico"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('New Mexico',) (state) ?"
+    },
+    "2-7606": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Wisconsin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Wisconsin',) (state) ?"
+    },
+    "2-7607": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Alaska"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Alaska',) (state) ?"
+    },
+    "2-7608": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Tennessee',) (state) ?"
+    },
+    "2-7609": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Kentucky"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Kentucky',) (state) ?"
+    },
+    "2-7610": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/New_Jersey"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('New Jersey',) (state) ?"
+    },
+    "2-7611": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Georgia_(U.S._state)"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Georgia',) (state) ?"
+    },
+    "2-7612": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Florida',) (state) ?"
+    },
+    "2-7613": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/West_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('West Virginia',) (state) ?"
+    },
+    "2-7614": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Texas"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Texas',) (state) ?"
+    },
+    "2-7615": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Arizona"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Arizona',) (state) ?"
+    },
+    "2-7618": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "22/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 22/01/2017 (day) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-7620": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Cleveland"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "20/02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 20/02/2017 (day) in ('Ohio', 'Cleveland') (city) ?"
+    },
+    "2-7622": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Penile,_Louisville"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "01/03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/03/2017 (day) in ('Kentucky', 'Louisville') (city) ?"
+    },
+    "2-7624": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Chicago"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "25/01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 25/01/2017 (day) in ('Illinois', 'Chicago') (city) ?"
+    },
+    "2-7628": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Michael (first) ?"
+    },
+    "2-7631": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Justin"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Justin (first) ?"
+    },
+    "2-7637": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name Michael (first) ?"
+    },
+    "2-7640": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name David (first) ?"
+    },
+    "2-7642": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Malik"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Malik (first) ?"
+    },
+    "2-7644": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name David (first) ?"
+    },
+    "2-7647": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Christopher"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name Christopher (first) ?"
+    },
+    "2-7650": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Terrance"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name Terrance (first) ?"
+    },
+    "2-7658": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Christian"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Christian (first) ?"
+    },
+    "2-7660": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Kyle"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Kyle (first) ?"
+    },
+    "2-7663": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Julian"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Julian (first) ?"
+    },
+    "2-7666": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Branden"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Branden (first) ?"
+    },
+    "2-7667": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Larry"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Larry (first) ?"
+    },
+    "2-7669": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Maria"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Maria (first) ?"
+    },
+    "2-7673": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "James"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name James (first) ?"
+    },
+    "2-7679": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Keith"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Keith (first) ?"
+    },
+    "2-7681": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Anthony"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Anthony (first) ?"
+    },
+    "2-7685": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Justin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Justin (first) ?"
+    },
+    "2-7690": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Kevin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Kevin (first) ?"
+    },
+    "2-7695": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Malik"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Malik (first) ?"
+    },
+    "2-7698": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Samuel"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Samuel (first) ?"
+    },
+    "2-7700": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Steve"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Steve (first) ?"
+    },
+    "2-7704": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Christopher"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Christopher (first) ?"
+    },
+    "2-7707": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Brian"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Brian (first) ?"
+    },
+    "2-7711": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "David"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name David (first) ?"
+    },
+    "2-7721": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Michael (first) ?"
+    },
+    "2-7725": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Carlos"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Carlos (first) ?"
+    },
+    "2-7728": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Derrick"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Derrick (first) ?"
+    },
+    "2-7731": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Donald"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Donald (first) ?"
+    },
+    "2-7732": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Terrance"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Terrance (first) ?"
+    },
+    "2-7736": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Randy"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Randy (first) ?"
+    },
+    "2-7738": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Duane"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Duane (first) ?"
+    },
+    "2-7740": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Samantha"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Samantha (first) ?"
+    },
+    "2-7742": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Arthur"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Arthur (first) ?"
+    },
+    "2-7743": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Joshua"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Joshua (first) ?"
+    },
+    "2-7747": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Davis"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name Davis (last) ?"
+    },
+    "2-7749": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Williams"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name Williams (last) ?"
+    },
+    "2-7756": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Taylor"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Taylor (last) ?"
+    },
+    "2-7758": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Wilson"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Wilson (last) ?"
+    },
+    "2-7761": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Smith"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) that involve the name Smith (last) ?"
+    },
+    "2-7763": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Johnson (last) ?"
+    },
+    "2-7767": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Brown"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) that involve the name Brown (last) ?"
+    },
+    "2-7770": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Jackson"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Jackson (last) ?"
+    },
+    "2-7771": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Maxwell"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Maxwell (last) ?"
+    },
+    "2-7773": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Howard"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Howard (last) ?"
+    },
+    "2-7778": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Brown"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Brown (last) ?"
+    },
+    "2-7782": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Davis"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Davis (last) ?"
+    },
+    "2-7787": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Clarke"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Clarke (last) ?"
+    },
+    "2-7792": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Johnson (last) ?"
+    },
+    "2-7798": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Hall"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Hall (last) ?"
+    },
+    "2-7800": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Anderson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Anderson (last) ?"
+    },
+    "2-7807": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Williams"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Williams (last) ?"
+    },
+    "2-7809": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Turner"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Turner (last) ?"
+    },
+    "2-7811": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Collins"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Collins (last) ?"
+    },
+    "2-7816": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Young"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Young (last) ?"
+    },
+    "2-7821": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Taylor"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Taylor (last) ?"
+    },
+    "2-7823": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Benson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Benson (last) ?"
+    },
+    "2-7826": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Ramirez"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Ramirez (last) ?"
+    },
+    "2-7828": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Jones"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Jones (last) ?"
+    },
+    "2-7830": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Jackson"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Jackson (last) ?"
+    },
+    "2-7838": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Smith"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Smith (last) ?"
+    },
+    "2-7841": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Florida"
+        },
+        "participant": {
+            "first": "Michael"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['injuring'] events happened in ('Florida',) (state) that involve the name Michael (first) ?"
+    },
+    "2-7843": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['injuring'] events happened in ('Tennessee', 'Memphis') (city) that involve the name Johnson (last) ?"
+    },
+    "2-7844": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Illinois"
+        },
+        "participant": {
+            "last": "Turner"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['injuring'] events happened in ('Illinois',) (state) that involve the name Turner (last) ?"
+    },
+    "2-7845": {
+        "event_type": "injuring",
+        "location": {
+            "state": "http://dbpedia.org/resource/Tennessee"
+        },
+        "participant": {
+            "last": "Johnson"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['injuring'] events happened in ('Tennessee',) (state) that involve the name Johnson (last) ?"
+    },
+    "2-7848": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Leavell"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) that involve the name Leavell (last) ?"
+    },
+    "2-7849": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Jumyrin"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Jumyrin (first) ?"
+    },
+    "2-7850": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Briddell"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Briddell (first) ?"
+    },
+    "2-7851": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Memphis,_Tennessee"
+        },
+        "participant": {
+            "full_name": "Miosha Cook"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['injuring'] events happened in ('Tennessee', 'Memphis') (city) that involve the name Miosha Cook (full_name) ?"
+    },
+    "2-7852": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Baptiste"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Baptiste (last) ?"
+    },
+    "2-7853": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Toledo,_Ohio"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 03/2017 (month) in ('Ohio', 'Toledo') (city) ?"
+    },
+    "2-7854": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Lynchburg,_Virginia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 01/2017 (month) in ('Virginia', 'Lynchburg') (city) ?"
+    },
+    "2-7855": {
+        "event_type": "killing",
+        "participant": {
+            "full_name": "Rafael Navarro-Garcia"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 03/2017 (month) that involve the name Rafael Navarro-Garcia (full_name) ?"
+    },
+    "2-7856": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Weaver"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Weaver (last) ?"
+    },
+    "2-7857": {
+        "event_type": "killing",
+        "location": {
+            "state": "http://dbpedia.org/resource/Mississippi"
+        },
+        "participant": {
+            "full_name": "Derric Hall"
+        },
+        "subtask": 2,
+        "verbose_question": "How many ['killing'] events happened in ('Mississippi',) (state) that involve the name Derric Hall (full_name) ?"
+    },
+    "2-7858": {
+        "event_type": "killing",
+        "participant": {
+            "full_name": "Wyatt Krauss"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "30/03/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 30/03/2017 (day) that involve the name Wyatt Krauss (full_name) ?"
+    },
+    "2-7859": {
+        "event_type": "injuring",
+        "participant": {
+            "full_name": "Deonta Turner"
+        },
+        "subtask": 2,
+        "time": {
+            "day": "02/04/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/04/2017 (day) that involve the name Deonta Turner (full_name) ?"
+    },
+    "2-7860": {
+        "event_type": "killing",
+        "participant": {
+            "first": "Kiearra"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 02/2017 (month) that involve the name Kiearra (first) ?"
+    },
+    "2-7861": {
+        "event_type": "injuring",
+        "participant": {
+            "last": "Shively"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "02/2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 02/2017 (month) that involve the name Shively (last) ?"
+    },
+    "2-7862": {
+        "event_type": "killing",
+        "participant": {
+            "full_name": "Esteban Santiago"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Esteban Santiago (full_name) ?"
+    },
+    "2-7863": {
+        "event_type": "killing",
+        "participant": {
+            "full_name": "Jonathan Martinez"
+        },
+        "subtask": 2,
+        "time": {
+            "month": "01/2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 01/2017 (month) that involve the name Jonathan Martinez (full_name) ?"
+    },
+    "2-7864": {
+        "event_type": "killing",
+        "participant": {
+            "last": "Herring"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Herring (last) ?"
+    },
+    "2-7865": {
+        "event_type": "injuring",
+        "location": {
+            "city": "http://dbpedia.org/resource/Temple_Hills,_Maryland"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) in ('Maryland', 'Temple Hills') (city) ?"
+    },
+    "2-7866": {
+        "event_type": "injuring",
+        "participant": {
+            "first": "Cornell"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['injuring'] events happened in 2017 (year) that involve the name Cornell (first) ?"
+    },
+    "2-7867": {
+        "event_type": "killing",
+        "participant": {
+            "full_name": "Jacob Redfern"
+        },
+        "subtask": 2,
+        "time": {
+            "year": "2017"
+        },
+        "verbose_question": "How many ['killing'] events happened in 2017 (year) that involve the name Jacob Redfern (full_name) ?"
+    }
+}
