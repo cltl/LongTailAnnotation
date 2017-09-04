@@ -8,6 +8,12 @@ $(function(){
         });
     } else {
         //$("#output").html("nonono");
+        $.get('/userstats', {task: 'men'}, function(data, status) {
+            $("#mendocs").html(data['men_docs']);
+            $("#menincs").html(data['men_incs']);
+            $("#strdocs").html('0');
+            $("#strincs").html('0');
+        });
     }
 });
 

@@ -1,46 +1,72 @@
 $(function(){
 
-    $.get('/listfiles', function(data, status) {
+    $.get('/listincidents', function(data, status) {
         for(var i = 0; i < data.length; i++) {
             $('#pickfile').append($('<option></option>').val(data[i]).html(data[i]));
         }
     });
-
+    $("#annotation").hide();
 });
 
-var showSelected = function(){
+var getExistingAnnotations = function(){
+    return {"b": [], "s": [], "h": [], "i": [], "d": []};
+}
+
+var saveEvent = function(){
     var all = $(".active").map(function() {
-        return this.innerHTML;
+        return $(this).attr('id');
     }).get();
-    console.log(all.join());
-    alert(all.join());
+    var event_type = $("#eventtype").val();
+    annotations[event_type].push(all);
+   $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
+    });
 }
 
 var loadTextsFromFile = function(fn){
-    $.get("/gettext", {'filename': fn}, function(data, status) {
-        all_html = "";
+    $.get("/gettext", {'inc': fn}, function(data, status) {
+        var all_html = {"l": "", "r": ""};
+        var c=0, pos="";
         for (var k in data) {
-            all_html += '<h2>' + k + '</h2>';
+            if (c++%2==0) pos="l";
+            else pos="r";
+            all_html[pos] += "<div class=\"panel panel-default\">";
+            all_html[pos] += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + k + "<br/>(<i>Published on: <span id=" + k + "dct>" + data[k]['DCT'] + "</span></i>)</h4></div>";
+            all_html[pos] += "<div class=\"panel-body\">";
             for (var span_id in data[k]) {
-                var token = data[k][span_id];
-                all_html += "<span id=" + k + span_id + " class=\"clickable\">" + token + "</span> ";
+                if (span_id!="DCT"){
+                    var token = data[k][span_id];
+                    all_html[pos] += "<span id=" + k + span_id + " class=\"clickable\">" + token + "</span> ";
+                }
             }
+            all_html[pos] += "</div></div>";
         }
-        console.log(all_html);
-        $("#bigdiv").html(all_html);
+        $("#pnlLeft").html(all_html["l"]);
+        $("#pnlRight").html(all_html["r"]);
 	$(".clickable").click(function() {  //use a class, since your ID gets mangled
 	    $(this).toggleClass("active");      //add the class to the clicked element
-	  });
-
-
+	});
         return all_html;
     });
 }
 
-var updateTexts = function(){
-    var filename = $("#pickfile").val();
-    if (filename!="-1"){
-        var h = loadTextsFromFile(filename);
+var annotations={};
+
+var getStructuredData = function(inc) {
+    $.get('/getstrdata', {'inc': inc}, function(data, status) {
+        console.log(data);
+        data=JSON.parse(data);
+        var str_html = "<span id=\"strloc\">Location: " + data['address'] + ", " + data['city_or_county'] + ", " + data['state'] + "</span><br/><span id=\"strtime\">Date: " + data['date'] + "</span><br/><span id=\"strpart\">Participants: " + JSON.stringify(data['participants']) + "</span>"; 
+        $("#strinfo").html(str_html);
+    });
+}
+
+var loadIncident = function(){
+    var inc = $("#pickfile").val();
+    if (inc!="-1"){
+        $("#annotation").show();
+        getStructuredData(inc);
+        loadTextsFromFile(inc);
+        annotations = getExistingAnnotations();
     } else{
         $("#info").val("File not selected");
     }

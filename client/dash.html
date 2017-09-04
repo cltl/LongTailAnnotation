@@ -7,15 +7,17 @@
 <body class="centered">
 <div class="container">
 	<div class="login-container">
-            <div id="output" class="alert alert-success animated fadeInUp">Welcome back!</div>
-            <h2>Long Tail Annotation Tool: Dashboard</h2>
+            <div id="output" class="alert alert-success animated fadeInUp">Welcome back <%= username %> !</div>
+            <h2>Long Tail Annotation Tool: <%= username %>'s Dashboard</h2>
             <div id="stats">
             <h3>Your stats</h3>
             <div class="row">
                 <h4>Mention annotation</h4>
-                <span id="mstats">Annotated documents: N/a out of N/a</span>
+                <span>Annotated incidents: <b><span id="menincs"></span></b> out of N/a</span><br/>
+                <span>Annotated documents: <b><span id="mendocs"></span></b> out of N/a</span><br/>
                 <h4>Structured data annotation</h4>
-                <span id="sstats">Annotated documents: N/a out of N/a</span>
+                <span>Annotated incidents: <b><span id="strincs"></span></b> out of N/a</span><br/>
+                <span>Annotated documents: <b><span id="strdocs"></span></b> out of N/a</span><br/>
             </div>
             </div>
             <div class="row"> 
