@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var request = require('request');
 var fs = require('fs');
-var parse = require('csv-parse');
 var LocalStrategy = require('passport-local').Strategy
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -130,9 +129,9 @@ app.get('/userstats', isAuthenticated, function(req, res){
         var count_doc=0;
         var count_inc=replies.length;
         c=0;
-        client.mget(replies, function(err, result){
-            result.forEach(function(x) {count_doc+=x.length; if (++c==replies.length) res.send({'men_incs': count_inc, 'men_docs': count_doc});});
-        });
+//        client.mget(replies, function(err, result){
+//            result.forEach(function(x) {count_doc+=x.length; if (++c==replies.length) res.send({'men_incs': count_inc, 'men_docs': count_doc});});
+//        });
     })
 
     }
