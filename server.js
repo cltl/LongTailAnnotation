@@ -112,11 +112,6 @@ app.get('/listincidents', isAuthenticated, function(req, res){
     });
 });
 
-app.get('/gettokens', isAuthenticated, function(req, res){
-    // TODO: for the chosen incident (in req.param), get a question
-    // open that question's conll, and load all tokens with ids
-});
-
 app.get('/getstrdata', isAuthenticated, function(req, res){
     var inc = req.param('inc');
     client.get('incstr:' + inc, function(err, result){
@@ -150,9 +145,7 @@ app.get('/userstats', isAuthenticated, function(req, res){
     }
 });
 
-// TODO: should be a post request
 // TODO: check if the incident is valid
-// TODO: docs should be json, and parsed as such
 app.post('/storeannotations', function(req, res) {
     if (req.param('task') && req.param('incident') && req.param('annotations')){
         var task = req.param('task');
@@ -162,6 +155,19 @@ app.post('/storeannotations', function(req, res) {
         res.send("OK");
     } else {
         res.send("Not OK: incident id not specified, or no documents listed");
+    }
+});
+
+app.post('/loadannotations', function(req, res){
+    if (req.param('incident') && req.param('task')){
+        var task = req.param('task');
+        var user = req.user.user;
+        var rkey = task + ':' + user + ':' + req.param('incident');
+        client.get(rkey, function(err, data){ 
+            if (!err) res.send(JSON.parse(data));
+        });
+    } else {
+        res.send("Not OK: incident id not specified");
     }
 });
 

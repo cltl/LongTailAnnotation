@@ -7,4 +7,22 @@ html,body{
     background: #0f0;
 }
 
+.event_s {
+    background: #0ff;
+}
 
+.event_b {
+    background: #fa0;
+}
+
+.event_h {
+    background: #f0f;
+}
+
+.event_i {
+    background: #f44;
+}
+
+.event_d {
+    background: #aaa;
+}
