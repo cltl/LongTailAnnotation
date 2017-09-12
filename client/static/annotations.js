@@ -1,6 +1,7 @@
 $(function(){
 
-    $.get('/listincidents', function(data, status) {
+    $.get('/listincidents', function(unsorted, status) {
+        var data = unsorted.sort();
         for(var i = 0; i < data.length; i++) {
             $('#pickfile').append($('<option></option>').val(data[i]).html(data[i]));
         }
@@ -35,7 +36,7 @@ var loadTextsFromFile = function(fn){
             for (var span_id in data[k]) {
                 if (span_id!="DCT"){
                     var token = data[k][span_id];
-                    all_html[pos] += "<span id=" + k + span_id + " class=\"clickable\">" + token + "</span> ";
+                    all_html[pos] += "<span id=" + k + '.' + span_id + " class=\"clickable\">" + token + "</span> ";
                 }
             }
             all_html[pos] += "</div></div>";

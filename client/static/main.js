@@ -7,8 +7,9 @@ $(function(){
             logMeIn();
         });
     } else {
-        //$("#output").html("nonono");
         $.get('/userstats', {task: 'men'}, function(data, status) {
+            console.log('hello');
+            console.log(data);
             $("#mendocs").html(data['men_docs']);
             $("#menincs").html(data['men_incs']);
             $("#strdocs").html('0');

@@ -55,47 +55,59 @@ app.get('/structured', isAuthenticated, function(req, res){
     res.sendFile('structured.html', {root:'./client'});
 });
 
-// TODO: figure out which file to load and which docs, based on the incident
 app.get('/gettext', isAuthenticated, function(req, res){
     var incident = req.param('inc');
-    var filename = 'data/2-7460.conll';
+    var doc = '';
+    client.get('incque:' + incident, function(err, reply){
+        if (!err) doc=JSON.parse(reply)[0];
+        var filename = 'data/CONLL/' + doc + '.conll';
+        var edges = fs.readFileSync(filename, 'utf-8')
+        .split('\n')
+        .filter(Boolean);
 
-    var edges = fs.readFileSync(filename, 'utf-8')
-    .split('\n')
-    .filter(Boolean);
+        var to_return={};
 
-    var to_return={};
+        var maximum=4;
 
-    var maximum=4;
-
-    cfiles=0;
-    var current="";
-    var current_spans={};
-    for (var j=0; j<edges.length; j++) {
-        if (edges[j].startsWith("#begin document")){
-            current=edges[j].replace("#begin document (", "").replace(");", "");
-            console.log(current);
-        } else if (edges[j].startsWith("#end document")){
-            console.log('nada');
-            to_return[current] = current_spans;
-            current_spans={};
-            if (++cfiles==maximum){
-                break;
+        client.get('incdoc:' + incident, function(err, reply){
+        var answer_docs = JSON.parse(reply);
+        console.log(answer_docs);
+        cfiles=0;
+        var current="";
+        var current_spans={};
+        var relevant=false;
+        for (var j=0; j<edges.length; j++) {
+            if (edges[j].startsWith("#begin document")){
+                
+                current=edges[j].replace("#begin document (", "").replace(");", "");
+                if (answer_docs.indexOf(current)>=0) relevant=true;              
+                else relevant = false;
+            } else if (edges[j].startsWith("#end document")){
+                if (relevant){
+                    to_return[current] = current_spans;
+                    current_spans={};
+                    if (++cfiles==maximum){
+                        break;
+                    }
+                }
+            } else {
+                if (relevant){
+                    var fields=edges[j].split('\t');
+                    var token_id = fields[0].substring(fields[0].indexOf('.')+1);
+                    var token = fields[1];
+                    current_spans[token_id]=token;
+                }
             }
-        } else {
-            var fields=edges[j].split('\t');
-            var token_id = fields[0].split('.').slice(-1)[0];
-            var token = fields[1];
-            current_spans[token_id]=token;
         }
-    }
-    res.send(to_return);
+        res.send(to_return);
+        });
+    });
 });
 
 app.get('/listincidents', isAuthenticated, function(req, res){
-    rkey_pattern = 'trialinc:*';
+    rkey_pattern = 'incstr:*';
     client.keys(rkey_pattern, function (err, replies) {
-        ret = replies.map(function(x) { return x.replace('trialinc:', '');});
+        ret = replies.map(function(x) { return x.replace('incstr:', '');});
         res.send(ret);
     });
 });
@@ -107,7 +119,7 @@ app.get('/gettokens', isAuthenticated, function(req, res){
 
 app.get('/getstrdata', isAuthenticated, function(req, res){
     var inc = req.param('inc');
-    client.get('trialinc:' + inc, function(err, result){
+    client.get('incstr:' + inc, function(err, result){
         res.send(JSON.parse(result));
     });
 });
@@ -129,6 +141,7 @@ app.get('/userstats', isAuthenticated, function(req, res){
         var count_doc=0;
         var count_inc=replies.length;
         c=0;
+        res.send({'men_incs': count_inc, 'men_docs': count_doc});
 //        client.mget(replies, function(err, result){
 //            result.forEach(function(x) {count_doc+=x.length; if (++c==replies.length) res.send({'men_incs': count_inc, 'men_docs': count_doc});});
 //        });
