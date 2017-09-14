@@ -3,6 +3,18 @@ html,body{
     height: 100%;
 }
 
+.selected{
+    background: #0f0
+}
+
+.ann-input{
+    background: #dfe
+}
+
+.table-condensed{
+  font-size: 1rem;
+}
+
 .active {
     background: #0f0;
 }
@@ -20,9 +32,17 @@ html,body{
 }
 
 .event_i {
-    background: #f44;
+    background: #f77;
 }
 
 .event_d {
     background: #aaa;
+}
+
+.event_m {
+    background: #77f;
+}
+
+.event_o {
+    background: #7aa;
 }
