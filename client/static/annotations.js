@@ -83,6 +83,7 @@ var saveEvent = function(){
         annotations[mention]={'cardinality': cardinality, 'eventtype': event_type, 'participants': allParticipants};
     }
     $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
+        alert("Annotation saved. Now re-loading");
         loadTextsFromFile($("#pickfile").val());
     });
 }
