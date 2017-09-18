@@ -34,30 +34,6 @@ var getExistingAnnotations = function(fn, cb){
         }
  
        cb(data);
-       //if (data.length==0) cb({});
-/*
-        var out_ann={};
-        var et_c=0;
-       
-       //count_keys=0; 
-       //for (var event_type in data) { count_keys++; }
-
-        for (var event_type in data) {
-            var ev_c=0; 
-            while(ev_c<data[event_type].length) {
-                var m_c=0;
-                while(m_c<data[event_type][ev_c].length){
-                    var mention = data[event_type][ev_c][m_c];
-                    out_ann[mention]={'et':event_type, 'ev_c': ev_c};
-                    if (++m_c==data[event_type][ev_c].length && ev_c==data[event_type].length-1 && et_c==count_keys-1){
-                        cb(out_ann);
-                    } 
-                }
-                ev_c++;
-            }
-            et_c++;
-        }
-*/
     });
 
 }
@@ -68,7 +44,7 @@ var saveEvent = function(){
     }).get();
     if ($("#eventtype").val()!='b'){
         var allParticipants = $(".selected").map(function() {
-            return $(this).attr('data-index');
+            return parseInt($(this).attr('data-index'))+1;
         }).get();
         var cardinality = $("#cardinality").val();
     } else {
@@ -102,12 +78,14 @@ var loadTextsFromFile = function(fn){
             for (var span_id in data[k]) {
                 if (span_id!="DCT"){ // TODO: After the last dot only
                     var token = data[k][span_id];
+                    if (token=='NEWLINE') all_html[pos] +='<br/>';
+                    else {
                     var tid = k + '.' + span_id;
                     if (!annotated[tid]){
                         all_html[pos] += "<span id=" + tid + " class=\"clickable\">" + token + "</span> ";
                     } else {
                         all_html[pos] += "<span id=" + tid + " class=\"event_" + annotated[tid]['eventtype'] + "\">" + token + "<sub>" + annotated[tid]['participants'] + '</sub><sup>' + annotated[tid]['cardinality'] + "</sup></span> ";
-                    }
+                    } }
                 }
             }
             all_html[pos] += "</div></div>";
@@ -125,6 +103,12 @@ var loadTextsFromFile = function(fn){
 var getStructuredData = function(inc) {
     $.get('/getstrdata', {'inc': inc}, function(data, status) {
         data=JSON.parse(data);
+        var participants = data['participants'];
+        for (var c=1; c<=participants.length; c++){
+
+            participants[c-1]['Identifier']=c;
+        }
+
         console.log(data);
         var str_html = "<label id=\"strloc\">Location: " + data['address'] + ", " + data['city_or_county'] + ", " + data['state'] + "</label><br/><label id=\"strtime\">Date: " + data['date'] + "</label><br/><label>Killed: " + data['num_killed'] + "</label><br/><label>Injured:" + data['num_injured'] + "</label><br/>";
         $('#strtable').bootstrapTable("load", data['participants']);

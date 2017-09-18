@@ -115,7 +115,9 @@ app.get('/listincidents', isAuthenticated, function(req, res){
 app.get('/getstrdata', isAuthenticated, function(req, res){
     var inc = req.param('inc');
     client.get('incstr:' + inc, function(err, result){
-        res.send(JSON.parse(result));
+        var jsonresult = JSON.parse(result);
+        //result['participants'] = result['participants'].map(function(x) { return x.replace('incstr:', '');});
+        res.send(jsonresult);
     });
 });
 
