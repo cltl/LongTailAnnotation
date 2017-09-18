@@ -64,34 +64,49 @@ var saveEvent = function(){
     });
 }
 
+var add_token = function(token, tid, annotated) {
+    if (token=='NEWLINE') return '<br/>';
+    else {
+	if (!annotated[tid]){
+	    return "<span id=" + tid + " class=\"clickable\">" + token + "</span> ";
+	} else {
+	    return "<span id=" + tid + " class=\"event_" + annotated[tid]['eventtype'] + "\">" + token + "<sub>" + annotated[tid]['participants'] + '</sub><sup>' + annotated[tid]['cardinality'] + "</sup></span> ";
+	}
+    }
+    
+}
+
+var title_token = function(tid){
+    return tid.split('.')[1][0]=='t';
+}
+
 var loadTextsFromFile = function(fn){
     $.get("/gettext", {'inc': fn}, function(data, status) {
         getExistingAnnotations(fn, function(annotated){
-        var all_html = {"l": "", "r": ""};
+        var all_html = ""; 
         var c=0, pos="";
         for (var k in data) {
-            if (c++%2==0) pos="l";
-            else pos="r";
-            all_html[pos] += "<div class=\"panel panel-default\">";
-            all_html[pos] += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + k + "<br/>(<i>Published on: <span id=" + k + "dct>" + data[k]['DCT'] + "</span></i>)</h4></div>";
-            all_html[pos] += "<div class=\"panel-body\">";
+            pos="l";
+            var title = "";
+            var header = "<div class=\"panel panel-default\">";
+            var body = "<div class=\"panel-body\">";
             for (var span_id in data[k]) {
                 if (span_id!="DCT"){ // TODO: After the last dot only
                     var token = data[k][span_id];
-                    if (token=='NEWLINE') all_html[pos] +='<br/>';
-                    else {
-                    var tid = k + '.' + span_id;
-                    if (!annotated[tid]){
-                        all_html[pos] += "<span id=" + tid + " class=\"clickable\">" + token + "</span> ";
-                    } else {
-                        all_html[pos] += "<span id=" + tid + " class=\"event_" + annotated[tid]['eventtype'] + "\">" + token + "<sub>" + annotated[tid]['participants'] + '</sub><sup>' + annotated[tid]['cardinality'] + "</sup></span> ";
-                    } }
+	            var tid = k + '.' + span_id;
+                    if (title_token(tid)){ //title
+                        title+=add_token(token, tid, annotated);
+                    } else { //body
+                        body+=add_token(token, tid, annotated);
+                    } 
                 }
             }
-            all_html[pos] += "</div></div>";
+            header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + title + "&nbsp;(<i>Published on: <span id=" + k + "dct>" + data[k]['DCT'] + "</span></i>)</h4></div>";
+            body += "</div></div>";
+            all_html += header + body;
         }
-        $("#pnlLeft").html(all_html["l"]);
-        $("#pnlRight").html(all_html["r"]);
+        $("#pnlLeft").html(all_html);
+        //$("#pnlRight").html(all_html["r"]);
 	$(".clickable").click(function() {  //use a class, since your ID gets mangled
 	    $(this).toggleClass("active");      //add the class to the clicked element
 	});
