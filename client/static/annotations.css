@@ -3,20 +3,44 @@ html,body{
     height: 100%;
 }
 
+#bigdiv{
+    overflow-y: scroll;
+}
+
+.panel-title{
+    font-size: 1.5rem;
+}
+
 .selected{
-    background: #0f0
+    background: #0f0;
 }
 
 .ann-input{
-    background: #dfe
+    background: #dfe;
+}
+
+#bigdiv {
+    background: #dfe;
 }
 
 .table-condensed{
   font-size: 1rem;
 }
 
-.active {
+span.active {
     background: #0f0;
+}
+
+span.inactive {
+    background: #f00;
+}
+
+label.active {
+    background: #0f0;
+}
+
+label.inactive {
+    background: #f00;
 }
 
 .event_s {
@@ -32,7 +56,7 @@ html,body{
 }
 
 .event_i {
-    background: #f77;
+    background: #f99;
 }
 
 .event_d {

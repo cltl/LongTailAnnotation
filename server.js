@@ -105,10 +105,23 @@ app.get('/gettext', isAuthenticated, function(req, res){
 });
 
 app.get('/listincidents', isAuthenticated, function(req, res){
-    rkey_pattern = 'incstr:*';
-    client.keys(rkey_pattern, function (err, replies) {
-        ret = replies.map(function(x) { return x.replace('incstr:', '');});
-        res.send(ret);
+    var all_pattern = 'incstr:';
+    client.keys(all_pattern + '*', function (err, all_incs) {
+        if (!req.param('task') || (req.param('task')!='men' && req.param('task')!='str')) {
+            res.send("Not OK. Such task does not exist. Choose either men or str.");
+        } else {
+        var user = req.user.user;
+        var task = req.param('task');
+        var ann_pattern = task + ":" + user + ":";
+        client.keys(ann_pattern + '*', function (err, ann_incs) {
+            var all_i = all_incs.map(function(x) { return x.replace(all_pattern, '');});
+            var ann_i = new Set(ann_incs.map(function(x) { return x.replace(ann_pattern, '');}));
+            var intersection = new Set(all_i.filter(x => ann_i.has(x)));
+            console.log(intersection);
+            var difference = new Set(all_i.filter(x => !ann_i.has(x)));
+            res.send({'new': Array.from(difference), 'old': Array.from(intersection)});
+        });
+        }
     });
 });
 
@@ -122,7 +135,6 @@ app.get('/getstrdata', isAuthenticated, function(req, res){
 });
 
 
-// TODO: store and retrieve jsons properly in redis
 // TODO: make sure it also works for structured data
 app.get('/userstats', isAuthenticated, function(req, res){
     if (!req.param('task') || (req.param('task')!='men' && req.param('task')!='str')) {
@@ -135,13 +147,21 @@ app.get('/userstats', isAuthenticated, function(req, res){
         // NOTE: code in this callback is NOT atomic
         // this only happens after the the .exec call finishes.
         //client.mget(replies, redis.print);
-        var count_doc=0;
         var count_inc=replies.length;
         c=0;
-        res.send({'men_incs': count_inc, 'men_docs': count_doc});
-//        client.mget(replies, function(err, result){
-//            result.forEach(function(x) {count_doc+=x.length; if (++c==replies.length) res.send({'men_incs': count_inc, 'men_docs': count_doc});});
-//        });
+        if (!count_inc) res.send({'men_incs': count_inc, 'men_docs': 0});
+        else {
+            client.mget(replies, function(err, result){
+                var docs = new Set();
+                result.forEach(function(x) {
+                    var xjson = JSON.parse(x);
+                    console.log(xjson);
+                    var num_keys = Object.keys(xjson).length;
+                    for (var k in xjson) docs.add(k.split('.')[0]);
+                    if (++c==replies.length) res.send({'men_incs': count_inc, 'men_docs': docs.size});
+                });
+            });
+        }
     })
 
     }
