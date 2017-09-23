@@ -1,5 +1,6 @@
 $(function(){
 
+    disqualification = [];
     $.get('/listincidents', {'task': 'men'}, function(unsorted, status) {
         var old_inc = unsorted['old'];
         var new_inc = unsorted['new'];
@@ -35,7 +36,6 @@ $("#eventtype").on('change', function(){
 for (var i=1; i<=100; i++){
     $("#cardinality").append($('<option></option>').val(i).html(i));
 }
-
 });
 
 var clearSelection = function(){
@@ -48,11 +48,19 @@ var getExistingAnnotations = function(fn, cb){
          if (!data) {console.log('no data'); annotations={};}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
             annotations=data;
-        }
- 
+        } 
        cb(data);
     });
+}
 
+var getExistingDisqualified = function(fn, cb){
+    $.post('/loaddisqualified', {'task': 'men', 'incident': fn}, function(data, status){
+         if (!data) {console.log('no data'); disqualification=[];}//"s": [], "b": [], "i": [], "h": [], "d": []};}
+         else {
+            disqualification=data;
+        }
+       cb(data);
+    });
 }
 
 var storeAndReload = function(annotations){
@@ -62,16 +70,21 @@ var storeAndReload = function(annotations){
     });
 }
 
+var storeDisqAndReload = function(){
+    $.post("/storedisqualified", {'disqualification': disqualification, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
+        alert("Disqualified articles updated.");
+//        loadTextsFromFile($("#pickfile").val());
+    });
+}
+
 var removeAnnotations = function(){
     var allMentions = $(".inactive").map(function() {
         return $(this).attr('id');
     }).get();
     for (var i=0; i<allMentions.length; i++){
         var k = allMentions[i];
-        console.log(k);
         delete annotations[k];
     }
-    console.log(annotations);
     storeAndReload(annotations);
 }
 
@@ -117,18 +130,24 @@ var titleToken = function(tid){
     return tid.split('.')[1][0]=='t';
 }
 
+var toggleDisqualify = function(d){
+
+    if (!$("#" + d).hasClass("disqualified")) { $("#" + d).addClass("disqualified"); $('#btn' + d).html("Mark relevant"); disqualification.push(d); storeDisqAndReload(); }  
+    else { $("#" + d).removeClass("disqualified"); $('#btn' + d).html("Mark non-relevant"); var index = disqualification.indexOf(d); if (index > -1) { disqualification.splice(index, 1);} storeDisqAndReload();}
+}
+
 var loadTextsFromFile = function(fn){
     $("#pnlLeft").html("");
     $.get("/gettext", {'inc': fn}, function(data, status) {
         getExistingAnnotations(fn, function(annotated){
+        getExistingDisqualified(fn, function(disqualified){
         var all_html = ""; 
         var c=0;
         for (var k in data) {
             var title = "";
-            var header = "<div class=\"panel panel-default\">";
             var body = "<div class=\"panel-body\">";
             for (var span_id in data[k]) {
-                if (span_id!="DCT"){ // TODO: After the last dot only
+                if (span_id!="DCT"){ 
                     var token = data[k][span_id];
 	            var tid = k + '.' + span_id;
                     if (titleToken(tid)){ //title
@@ -138,7 +157,19 @@ var loadTextsFromFile = function(fn){
                     } 
                 }
             }
-            header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + title + "&nbsp;(<i>Published on: <span id=" + k + "dct>" + data[k]['DCT'] + "</span></i>)</h4></div>";
+            if (!disqualified || disqualified.indexOf(k)==-1) var disq = false;
+            else var disq = true;
+            if (disq) var header = "<div class=\"panel panel-default disqualified\" id=\"" + k + "\">";
+            else var header = "<div class=\"panel panel-default\" id=\"" + k + "\">";
+            header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + title + "&nbsp;(<i>Published on: <span id=" + k + "dct>" + data[k]['DCT'] + "</span></i>) "; 
+            if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\')\">Mark non-relevant</button>";
+            else header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\')\">Mark relevant</button>";
+
+
+
+//            if (!disq) header += "<button class=\"btn btn-primary quabtn\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(" + k + ")\">Disqualify this document</button>";
+//            else header += "<button class=\"btn btn-primary disbtn\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(" + k + ")\">Qualify this document</button>";
+            header += "</h4></div>";
             body += "</div></div>";
             all_html += header + body;
         }
@@ -156,6 +187,7 @@ var loadTextsFromFile = function(fn){
         });
         return all_html;
         });
+        });
     });
 }
 
@@ -168,7 +200,6 @@ var getStructuredData = function(inc) {
             participants[c-1]['Identifier']=c;
         }
 
-        console.log(data);
         var str_html = "<label id=\"strloc\">Location: " + data['address'] + ", " + data['city_or_county'] + ", " + data['state'] + "</label><br/><label id=\"strtime\">Date: " + data['date'] + "</label><br/><label>Killed: " + data['num_killed'] + "</label>, <label>Injured:" + data['num_injured'] + "</label><br/>";
         $('#strtable').bootstrapTable("load", data['participants']);
 // ({

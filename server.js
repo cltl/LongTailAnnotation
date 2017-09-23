@@ -71,7 +71,6 @@ app.get('/gettext', isAuthenticated, function(req, res){
 
         client.get('incdoc:' + incident, function(err, reply){
         var answer_docs = JSON.parse(reply);
-        console.log(answer_docs);
         cfiles=0;
         var current="";
         var current_spans={};
@@ -115,9 +114,8 @@ app.get('/listincidents', isAuthenticated, function(req, res){
         var ann_pattern = task + ":" + user + ":";
         client.keys(ann_pattern + '*', function (err, ann_incs) {
             var all_i = all_incs.map(function(x) { return x.replace(all_pattern, '');});
-            var ann_i = new Set(ann_incs.map(function(x) { return x.replace(ann_pattern, '');}));
+            var ann_i = new Set(ann_incs.map(function(x) { return x.split(':')[3];}));
             var intersection = new Set(all_i.filter(x => ann_i.has(x)));
-            console.log(intersection);
             var difference = new Set(all_i.filter(x => !ann_i.has(x)));
             res.send({'new': Array.from(difference), 'old': Array.from(intersection)});
         });
@@ -142,7 +140,7 @@ app.get('/userstats', isAuthenticated, function(req, res){
     } else {
     var user = req.user.user;
     var task = req.param('task');
-    var rkey_pattern = task + ":" + user + ":*";
+    var rkey_pattern = task + ":" + user + ":ann:*";
     client.keys(rkey_pattern, function (err, replies) {
         // NOTE: code in this callback is NOT atomic
         // this only happens after the the .exec call finishes.
@@ -155,7 +153,6 @@ app.get('/userstats', isAuthenticated, function(req, res){
                 var docs = new Set();
                 result.forEach(function(x) {
                     var xjson = JSON.parse(x);
-                    console.log(xjson);
                     var num_keys = Object.keys(xjson).length;
                     for (var k in xjson) docs.add(k.split('.')[0]);
                     if (++c==replies.length) res.send({'men_incs': count_inc, 'men_docs': docs.size});
@@ -172,8 +169,21 @@ app.post('/storeannotations', function(req, res) {
     if (req.param('task') && req.param('incident') && req.param('annotations')){
         var task = req.param('task');
         var user = req.user.user;
-        var rkey = task + ':' + user + ':' + req.param('incident');
+        var rkey = task + ':' + user + ':ann:' + req.param('incident');
         client.set(rkey, JSON.stringify(req.param('annotations')));
+        res.send("OK");
+    } else {
+        res.send("Not OK: incident id not specified, or no documents listed");
+    }
+});
+
+// TODO: check if the incident is valid
+app.post('/storedisqualified', function(req, res) {
+    if (req.param('task') && req.param('incident')){
+        var task = req.param('task');
+        var user = req.user.user;
+        var rkey = task + ':' + user + ':dis:' + req.param('incident');
+        client.set(rkey, JSON.stringify(req.param('disqualification') || []));
         res.send("OK");
     } else {
         res.send("Not OK: incident id not specified, or no documents listed");
@@ -184,8 +194,21 @@ app.post('/loadannotations', function(req, res){
     if (req.param('incident') && req.param('task')){
         var task = req.param('task');
         var user = req.user.user;
-        var rkey = task + ':' + user + ':' + req.param('incident');
+        var rkey = task + ':' + user + ':ann:' + req.param('incident');
         client.get(rkey, function(err, data){ 
+            if (!err) res.send(JSON.parse(data));
+        });
+    } else {
+        res.send("Not OK: incident id not specified");
+    }
+});
+
+app.post('/loaddisqualified', function(req, res){
+    if (req.param('incident') && req.param('task')){
+        var task = req.param('task');
+        var user = req.user.user;
+        var rkey = task + ':' + user + ':dis:' + req.param('incident');
+        client.get(rkey, function(err, data){
             if (!err) res.send(JSON.parse(data));
         });
     } else {
