@@ -9,6 +9,15 @@
 	<div class="login-container">
             <div id="output" class="alert alert-success animated fadeInUp">Welcome back <%= username %> !</div>
             <h2>Long Tail Annotation Tool: <%= username %>'s Dashboard</h2>
+            <% if(["piek", "roxane","filip","marten"].indexOf(username)>-1) { %>
+            <div id="admintools">
+            <h3>Administrator tools</h3>
+                <button class="btn btn-primary btn-ann" onclick="downloadAnnotations('ngan')" target="_blank">Ngan's annotations</button>
+                <button class="btn btn-primary btn-ann" onclick="downloadAnnotations('areum')" target="_blank">Areum's annotations</button>
+                <a href="http://anntool.filten.lod.labs.vu.nl/logs/ngan.txt" target="_blank">Ngan's logs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://anntool.filten.lod.labs.vu.nl/logs/areum.txt" target="_blank">Areum's logs</a>
+            </div>
+            <% } %>
             <div id="stats">
             <h3>Your stats</h3>
             <div class="row">

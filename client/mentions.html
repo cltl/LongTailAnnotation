@@ -23,10 +23,13 @@
 </div>
 <br/>
 <div class="row" id="pickrow">
+    <div class="col-sm-5">
     <select id="pickfile">
         <option value="-1">-Please pick an incident ID-</option>
     </select>
     <button class="btn btn-primary btn-ann" onclick="loadIncident()">Load incident</button><br/>
+    </div>
+    <div class="col-sm-7"><label id="infoMessage"></label></div>
 </div>
 <div class="row"></div>
 <div class="row" id="annrow">
@@ -35,13 +38,15 @@
     <div id="strinfo"></div>
     <label>Event type: </label>
     <select id="eventtype">
+    <option value="-1" selected>-Please pick an event type-</option>
     <option value="b">incident</option>
-    <option value="s" selected>use firearm</option>
+    <option value="s">firing a gun</option>
     <option value="h">hit</option>
     <option value="m">miss</option>
     <option value="i">injury</option>
     <option value="d">death</option>
     <option value="o">other</option>
+    <option value="g">generic</option>
     </select>
     <br/>
     <label>Cardinality:</label>
@@ -49,14 +54,15 @@
     <option value="UNK" selected>unknown</option>
     </select>
     <br/>
-    <label>Event types legend: </label>&nbsp;<label class="event_b">incident</label>&nbsp;<label class="event_s">use firearm</label>&nbsp;<label class="event_h">hit</label>&nbsp;<label class="event_m">miss</label>&nbsp;<label class="event_i">injury</label>&nbsp;<label class="event_d">death</label>&nbsp;<label class="event_o">other</label>&nbsp;<br/><label>Selection legend:</label>&nbsp;<label class="active">selected to be added</label>&nbsp;<label class="inactive">selected to be removed</label>
+    <label>Event types legend: </label>&nbsp;<label class="event_b">incident</label>&nbsp;<label class="event_s">firing a gun</label>&nbsp;<label class="event_h">hit</label>&nbsp;<label class="event_m">miss</label>&nbsp;<label class="event_i">injury</label>&nbsp;<label class="event_d">death</label>&nbsp;<label class="event_o">other</label>&nbsp;<label class="event_g">generic</label>&nbsp;<br/><label>Selection legend:</label>&nbsp;<label class="active">selected to be added</label>&nbsp;<label class="inactive">selected to be removed</label>
     </div>
     </div>
     <div class="col-sm-7 ann-input"> 
     <table id="strtable" class="table-condensed"><thead><th data-field="Identifier">ID</th><th data-field="Status">Status</th><th data-field="Type">Type</th><th data-field="Gender">Gender</th><th data-field="Age">Age</th><th data-field\"Age Group\">Age Group</th><th data-field="Name">Name</th></thead><tbody></tbody></table>
-    <button class="btn btn-primary btn-ann" onclick="saveEvent()">Submit event</button>
-    <button class="btn btn-primary btn-ann" onclick="clearSelection()">Clear ALL selection</button>
-    <button class="btn btn-primary btn-ann" onclick="removeAnnotations()">Remove selected annotations</button>
+    <button class="btn btn-success btn-ann" onclick="saveEvent(0)">Submit event</button>
+    <button class="btn btn-info btn-ann" onclick="saveEvent(1)">Submit multiword unit</button>
+    <button class="btn btn-danger btn-rmv" onclick="removeAnnotations()">Remove annotation</button>
+    <button class="btn btn-basic btn-aux" onclick="clearSelection()">Clear selection</button>
     </div>
 </div>
 <div class="row" id="bigdiv">

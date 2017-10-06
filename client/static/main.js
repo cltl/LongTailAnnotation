@@ -18,6 +18,13 @@ $(function(){
     }
 });
 
+var downloadAnnotations = function(u){
+    window.open('/exportannotations?annotator=' + u);
+    //$.get('/exportannotations', {'annotator': u}, function(data, status){
+        
+    //});
+}
+
 var logout = function(){
     $.get("/logout");
 }

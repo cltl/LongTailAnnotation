@@ -1,4 +1,7 @@
+test_data/
+*.bin
 data/
 node_modules/
 dump.rdb
+client/logs
 allowed.json

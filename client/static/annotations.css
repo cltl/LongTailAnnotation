@@ -56,7 +56,7 @@ label.inactive {
 }
 
 .event_b {
-    background: #fa0;
+    background: #F4A460;
 }
 
 .event_h {
@@ -76,5 +76,20 @@ label.inactive {
 }
 
 .event_o {
-    background: #b2b266;
+    background: #F5DEB3;
+}
+
+.event_g {
+    background: #808000;
+}
+
+.good_info {
+    color: #0f0;
+}
+
+.bad_info {
+    color: #f00;
+}
+.mwu {
+    font-weight: bold;
 }

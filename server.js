@@ -39,6 +39,8 @@ app.use('/', express.static('client/static'));
 
 app.use('/img', express.static('client/img'));
 
+app.use('/logs', express.static('client/logs'));
+
 app.get('/', function(req, res){
     res.sendFile('index.html', {root:'./client'});
 });
@@ -123,6 +125,35 @@ app.get('/listincidents', isAuthenticated, function(req, res){
     });
 });
 
+var isAdmin = function (u){
+    return (['piek', 'roxane', 'filip', 'marten'].indexOf(u)>-1);
+}
+
+app.get('/exportannotations', isAuthenticated, function(req, res){
+    if (req.param('annotator') && isAdmin(req.user.user)){
+        var annotator = req.param('annotator');
+        var ann_pattern = "men:" + annotator + ":ann:";
+        client.keys(ann_pattern + '*', function(err, ann_incs){
+            var annJson = {};
+            var cnt = 0;
+            ann_incs.forEach(function (reply, index) {
+                var incId=reply.split(':')[3];
+                client.get(reply, function(err, data){
+                    annJson[incId]=JSON.parse(data);
+                    if (++cnt==ann_incs.length) {
+                        res.setHeader('Content-disposition', 'attachment; filename= ann_' + annotator + '.json');
+                        res.setHeader('Content-type', 'application/json');
+                        res.write(JSON.stringify(annJson), function (err) {
+                            res.end();
+                        });
+                        //res.send(annJson);
+                    }
+                });
+            });                
+        });
+    }
+});
+
 app.get('/getstrdata', isAuthenticated, function(req, res){
     var inc = req.param('inc');
     client.get('incstr:' + inc, function(err, result){
@@ -170,6 +201,7 @@ app.post('/storeannotations', function(req, res) {
         var task = req.param('task');
         var user = req.user.user;
         var rkey = task + ':' + user + ':ann:' + req.param('incident');
+        logAction(req.user.user, "UPDATE ANNOTATIONS");
         client.set(rkey, JSON.stringify(req.param('annotations')));
         res.send("OK");
     } else {
@@ -183,6 +215,7 @@ app.post('/storedisqualified', function(req, res) {
         var task = req.param('task');
         var user = req.user.user;
         var rkey = task + ':' + user + ':dis:' + req.param('incident');
+        logAction(req.user.user, "UPDATE DISQUALIFIED");
         client.set(rkey, JSON.stringify(req.param('disqualification') || []));
         res.send("OK");
     } else {
@@ -239,11 +272,20 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
+var logAction = function(u, action) {
+    var d = new Date();
+    d.setTime( d.getTime() + 2*60*60*1000 );
+    var n = d.toISOString();
+    fs.appendFile('client/logs/' + u + '.txt', action + '\t' + n + '\n', function (err){
+    });
+}
+
 /* Handle Login POST */
 app.post('/login', 
   passport.authenticate('local', { failureRedirect: '/' }),
   function(req, res) {
     //res.redirect('/dash');
+    logAction(req.user.user, "LOGIN");
     res.send(200);
   });
 
@@ -251,6 +293,7 @@ app.post('/login',
 // LOGOUT ==============================
 // =====================================
 app.get('/logout', function(req, res) {
+    logAction(req.user.user, "LOGOUT");
     req.logout();
     res.redirect('/');
 });
