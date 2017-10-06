@@ -36,6 +36,18 @@ $("#eventtype").on('change', function(){
 for (var i=1; i<=100; i++){
     $("#cardinality").append($('<option></option>').val(i).html(i));
 }
+
+	$(document).on("click", "span.clickable", function() {  //use a class, since your ID gets mangled
+            $('span').removeClass("inactive");
+	    $(this).toggleClass("active");      //add the class to the clicked element
+	});
+        $(document).on("click", "span.unclickable", function() {  //use a class, since your ID gets mangled
+            $('span').removeClass("active");
+            $(this).toggleClass("inactive");      //add the class to the clicked element
+        });
+
+
+
 }); // This is where the load function ends!
 
 
@@ -43,6 +55,8 @@ var clearSelection = function(){
     $('span').removeClass("active");
     $('span').removeClass("inactive");
 }
+
+
 
 var getExistingAnnotations = function(fn, cb){
     $.post('/loadannotations', {'task': 'men', 'incident': fn}, function(data, status){
@@ -64,15 +78,55 @@ var getExistingDisqualified = function(fn, cb){
     });
 }
 
-var storeAndReload = function(annotations){
-    $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
-        alert("Annotation saved. Now re-loading");
-        loadTextsFromFile($("#pickfile").val());
+var defaultValues = function(){
         $("#eventtype").val('-1');
         $("#cardinality").val('UNK');
         $("tr").removeClass("selected");
         $("#cardinality").show();
         $("#strtable").show();
+}
+
+var getCardinalityAndParticipants = function(){
+    if ($("#eventtype").val()=='b'){
+	var allParticipants = "ALL";
+	var cardinality = "ALL";
+    } else if ($("#eventtype").val()=='o' || $("#eventtype").val()=='g'){
+	var allParticipants = "UNK";
+	var cardinality = "UNK";
+    } else {
+	var allParticipants = $(".selected").map(function() {
+	    return parseInt($(this).attr('data-index'))+1;
+	}).get();
+	var cardinality = $("#cardinality").val();
+    }
+    return [cardinality, allParticipants];
+}
+
+var reloadInside=function(mwu=false){
+    if($("span.active").length>0){
+        var cp = getCardinalityAndParticipants();
+        var cardinality=cp[0];
+        var allParticipants=cp[1];
+  
+        $("span.active").append("<sub>" + (allParticipants || 'NONE') + '</sub><sup>' + cardinality + "</sup>");
+        var newClass = 'event_' + $("#eventtype").val();
+        if (!mwu){
+            $("span.active").removeClass().addClass(newClass).addClass("unclickable");
+        } else {
+            $("span.active").removeClass().addClass(newClass).addClass("unclickable").addClass("mwu");
+        }
+    } else if ($("span.inactive").length>0){
+        $("span.inactive").children().remove();
+        $("span.inactive").removeClass().addClass("clickable");
+    } 
+}
+
+var storeAndReload = function(annotations, mwu = false){
+    $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
+        alert("Annotation saved. Now re-loading");
+        //loadTextsFromFile($("#pickfile").val());
+        reloadInside(mwu);
+        defaultValues();
     });
 }
 
@@ -84,6 +138,7 @@ var storeDisqAndReload = function(){
 }
 
 var removeAnnotations = function(){
+    if ($("span.inactive").length>0){
     var allMentions = $(".inactive").map(function() {
         return $(this).attr('id');
     }).get();
@@ -103,6 +158,9 @@ var removeAnnotations = function(){
         delete annotations[k];
     }
     storeAndReload(annotations);
+    } else {
+        printInfo("Select at least one span to remove");
+    }
 }
 
 Array.prototype.allValuesSame = function() {
@@ -121,34 +179,28 @@ var sameSentence = function(allMentions){
     return sents.allValuesSame();
 }
 
-var saveEvent = function(mwu){
-    if ($("#eventtype").val()=='-1'){
-        $("#infoMessage").html("Please pick an event type");
+var printInfo = function(msg){
+        $("#infoMessage").html(msg);
         $("#infoMessage").removeClass("good_info");
         $("#infoMessage").addClass("bad_info");
+}
+
+var saveEvent = function(mwu){
+    if ($("#eventtype").val()=='-1'){
+        printInfo("Please pick an event type");
     } else {
         var allMentions = $(".active").map(function() {
             return $(this).attr('id');
         }).get();
         if (allMentions.length>0){
             if (mwu && !sameSentence(allMentions)) {
-                $("#infoMessage").html("All words of a multiword unit must be in the same sentence");
-                $("#infoMessage").removeClass("good_info");
-                $("#infoMessage").addClass("bad_info");
+                printInfo("All words of a multiword unit must be in the same sentence");
             } else {
             $("#infoMessage").html("");
-            if ($("#eventtype").val()=='b'){
-                var allParticipants = "ALL";
-                var cardinality = "ALL";
-            } else if ($("#eventtype").val()=='o' || $("#eventtype").val()=='g'){
-                var allParticipants = "UNK";
-                var cardinality = "UNK";
-            } else {
-                var allParticipants = $(".selected").map(function() {
-                    return parseInt($(this).attr('data-index'))+1;
-                }).get();
-                var cardinality = $("#cardinality").val();
-            } 
+            var cp = getCardinalityAndParticipants();
+            var cardinality=cp[0];
+            var allParticipants=cp[1];
+
             var event_type = $("#eventtype").val();
             //if (!annotations[event_type]) annotations[event_type]=[];
             //annotations[event_type].push(all);
@@ -159,12 +211,10 @@ var saveEvent = function(mwu){
                     annotations[mention]["mwu"] = allMentions;
                 }
             }
-            storeAndReload(annotations);
+            storeAndReload(annotations, mwu);
             }
         } else {
-            $("#infoMessage").html("Please select at least one mention");
-            $("#infoMessage").removeClass("good_info");
-            $("#infoMessage").addClass("bad_info");            
+            printInfo("Please select at least one mention");
         }
     }
 }
@@ -233,14 +283,6 @@ var loadTextsFromFile = function(fn){
 
         $("#bigdiv").height($(window).height()-($("#pickrow").height() + $("#titlerow").height()+$("#annrow").height())-20);
         //$("#pnlRight").html(all_html["r"]);
-	$(".clickable").click(function() {  //use a class, since your ID gets mangled
-            $('span').removeClass("inactive");
-	    $(this).toggleClass("active");      //add the class to the clicked element
-	});
-        $(".unclickable").click(function() {  //use a class, since your ID gets mangled
-            $('span').removeClass("active");
-            $(this).toggleClass("inactive");      //add the class to the clicked element
-        });
         return all_html;
         });
         });
@@ -282,8 +324,6 @@ var loadIncident = function(){
 
         //getExistingAnnotations(); 
    } else{
-        $("#infoMessage").html("Please select an incident");
-        $("#infoMessage").addClass("bad_info");
-        $("#infoMessage").removeClass("good_info");
+        printInfo("Please select an incident");
     }
 }
