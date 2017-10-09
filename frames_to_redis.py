@@ -13,7 +13,7 @@ def build_inc2que():
     my_index = defaultdict(set)
     subtasks=['1','2','3']
     for s in subtasks:
-        with open('test_data/%s_answers.json' % s, 'r') as infile:
+        with open('test_data2/%s_answers.json' % s, 'r') as infile:
             answers=json.load(infile)
             for q_id in answers.keys():
                 incs = answers[q_id]["answer_docs"].keys()
@@ -53,18 +53,18 @@ for index, row in allf.iterrows():
     new_inc2que[incident_id]=inc2que[incident_id]
 
     dockey = 'incdoc:%s' % incident_id
-#    r.set(dockey, json.dumps(docs))
+    r.set(dockey, json.dumps(docs))
 
     strkey = 'incstr:%s' % incident_id
     rval = row.to_json()
-#    r.set(strkey, json.dumps(rval))
+    r.set(strkey, json.dumps(rval))
 
 
 print(len(new_inc2que), bad_docs_num, too_many_part, empty_part)
 for k,v in new_inc2que.items():
     quekey = 'incque:%s' % k
     #print(k, v)
-#    r.set(quekey, json.dumps(list(v)))
+    r.set(quekey, json.dumps(list(v)))
 
 with open('new_inc2que.bin', 'wb') as outfile:
     pickle.dump(new_inc2que, outfile)

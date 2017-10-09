@@ -1,4 +1,4 @@
-test_data/
+test_data*/
 *.bin
 data/
 node_modules/

@@ -1,7 +1,43 @@
 $(function(){
 
     disqualification = [];
-    $.get('/listincidents', {'task': 'men'}, function(unsorted, status) {
+    $(".ann-input").hide();
+    if (document.title=="Mention Annotation"){ 
+        task = 'men';
+    //    $("#annotation").hide();
+        $("#strtable").bootstrapTable({});
+	$('#strtable tbody').on( 'click', 'tr', function () {
+	    $(this).toggleClass('selected');
+	} );
+
+	$("#eventtype").on('change', function(){
+	    if (this.value=='b' || this.value=='o' || this.value=='g'){
+		$("#cardinality").hide();
+		$("#strtable").hide();
+	    } else {
+		$("#cardinality").show();
+		$("#strtable").show();
+	    }
+	});
+
+	for (var i=1; i<=100; i++){
+	    $("#cardinality").append($('<option></option>').val(i).html(i));
+	}
+
+		$(document).on("click", "span.clickable", function() {  //use a class, since your ID gets mangled
+		    $('span').removeClass("inactive");
+		    $(this).toggleClass("active");      //add the class to the clicked element
+		});
+		$(document).on("click", "span.unclickable", function() {  //use a class, since your ID gets mangled
+		    $('span').removeClass("active");
+		    $(this).toggleClass("inactive");      //add the class to the clicked element
+		});
+    }
+    else {
+        task = 'str';
+        $("#strann").hide();
+    }
+    $.get('/listincidents', {'task': task}, function(unsorted, status) {
         var old_inc = unsorted['old'];
         var new_inc = unsorted['new'];
         var old_sorted = old_inc.sort();
@@ -15,39 +51,6 @@ $(function(){
             $('#pickfile').append($('<option></option>').val(new_sorted[i]).html(new_sorted[i]));
         }
     });
-//    $("#annotation").hide();
-    $("#strtable").bootstrapTable({});
-    $(".ann-input").hide();
-
-$('#strtable tbody').on( 'click', 'tr', function () {
-    $(this).toggleClass('selected');
-} );
-
-$("#eventtype").on('change', function(){
-    if (this.value=='b' || this.value=='o' || this.value=='g'){
-        $("#cardinality").hide();
-        $("#strtable").hide();
-    } else {
-        $("#cardinality").show();
-        $("#strtable").show();
-    }
-});
-
-for (var i=1; i<=100; i++){
-    $("#cardinality").append($('<option></option>').val(i).html(i));
-}
-
-	$(document).on("click", "span.clickable", function() {  //use a class, since your ID gets mangled
-            $('span').removeClass("inactive");
-	    $(this).toggleClass("active");      //add the class to the clicked element
-	});
-        $(document).on("click", "span.unclickable", function() {  //use a class, since your ID gets mangled
-            $('span').removeClass("active");
-            $(this).toggleClass("inactive");      //add the class to the clicked element
-        });
-
-
-
 }); // This is where the load function ends!
 
 
@@ -56,10 +59,8 @@ var clearSelection = function(){
     $('span').removeClass("inactive");
 }
 
-
-
-var getExistingAnnotations = function(fn, cb){
-    $.post('/loadannotations', {'task': 'men', 'incident': fn}, function(data, status){
+var getExistingAnnotations = function(fn, task, cb){
+    $.post('/loadannotations', {'task': task, 'incident': fn}, function(data, status){
          if (!data) {console.log('no data'); annotations={};}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
             annotations=data;
@@ -245,7 +246,7 @@ var toggleDisqualify = function(d){
 var loadTextsFromFile = function(fn){
     $("#pnlLeft").html("");
     $.get("/gettext", {'inc': fn}, function(data, status) {
-        getExistingAnnotations(fn, function(annotated){
+        getExistingAnnotations(fn, 'men', function(annotated){
         getExistingDisqualified(fn, function(disqualified){
         var all_html = ""; 
         var c=0;
@@ -312,18 +313,57 @@ var getStructuredData = function(inc) {
     });
 }
 
-var loadIncident = function(){
+var getAllInfo = function(inc){
+    var doc_id = inc + "#1";
+    $.get("/getincinfo", {'inc': inc}, function(data, status) {
+        var d = JSON.parse(data);
+        getExistingAnnotations(inc, 'str', function(str_anns){ 
+            if (str_anns){
+                $("#location").val(str_anns["location"]);
+                $("#incidentTime").val(str_anns["time"]);
+            } else{
+                $("#location").val(d["estimated_location"]);
+                $("#incidentTime").val(d["estimated_incident_date"]);
+            }
+            $("#pnlLeft").html("");
+            var article = d['articles'][0];
+            var header = "<div class=\"panel panel-default\" id=\"" + doc_id + "\">";
+            var body = "<div class=\"panel-body\">" + article['body'] + "</div>";
+
+            header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + article['title'] + "&nbsp;(<i>Published on: <span id=" + doc_id + "dct>" + article['dct'] + "</span></i>) ";
+            header += "</h4></div>";
+            $("#pnlLeft").html(header + body);
+        });
+    });
+}
+
+// Load incident - both for mention and structured annotation
+var loadIncident = function(task){
     var inc = $("#pickfile").val();
     if (inc!="-1"){
         //$("#annotation").show();
         $("#infoMessage").html("");
-        getStructuredData(inc);
         $(".ann-input").show();
-        loadTextsFromFile(inc);
+        if (task=='men'){
+            getStructuredData(inc);
+            loadTextsFromFile(inc);
+        } else { //structured data annotation
+            getAllInfo(inc);
+        }
         //$("#bigdiv").height("350px");
 
-        //getExistingAnnotations(); 
    } else{
         printInfo("Please select an incident");
     }
+}
+
+var saveStructuredAnnotation = function(){
+    var str_ann = {"time": $("#incidentTime").val(), "location": $("#location").val()};
+    $.post("/storeannotations", {'annotations': str_ann, 'task': 'str', 'incident': $("#pickfile").val()}, function(data, status){
+        alert("Annotation saved. Now re-loading");
+        location.reload();
+//        $(".ann-input").hide();
+//        $("#pickfile").val("-1");
+//        $("#pnlLeft").html("");
+    });
 }

@@ -54,7 +54,7 @@ app.get('/mentions', isAuthenticated, function(req, res){
 });
 
 app.get('/structured', isAuthenticated, function(req, res){
-    res.sendFile('structured.html', {root:'./client'});
+    res.render('structured.html', { username: req.user.user});
 });
 
 app.get('/gettext', isAuthenticated, function(req, res){
@@ -62,7 +62,7 @@ app.get('/gettext', isAuthenticated, function(req, res){
     var doc = '';
     client.get('incque:' + incident, function(err, reply){
         if (!err) doc=JSON.parse(reply)[0];
-        var filename = 'data/CONLL/' + doc + '.conll';
+        var filename = 'test_data2/CONLL/' + doc + '.conll';
         var edges = fs.readFileSync(filename, 'utf-8')
         .split('\n')
         .filter(Boolean);
@@ -105,24 +105,37 @@ app.get('/gettext', isAuthenticated, function(req, res){
     });
 });
 
-app.get('/listincidents', isAuthenticated, function(req, res){
-    var all_pattern = 'incstr:';
-    client.keys(all_pattern + '*', function (err, all_incs) {
-        if (!req.param('task') || (req.param('task')!='men' && req.param('task')!='str')) {
-            res.send("Not OK. Such task does not exist. Choose either men or str.");
-        } else {
-        var user = req.user.user;
-        var task = req.param('task');
-        var ann_pattern = task + ":" + user + ":";
-        client.keys(ann_pattern + '*', function (err, ann_incs) {
-            var all_i = all_incs.map(function(x) { return x.replace(all_pattern, '');});
-            var ann_i = new Set(ann_incs.map(function(x) { return x.split(':')[3];}));
-            var intersection = new Set(all_i.filter(x => ann_i.has(x)));
-            var difference = new Set(all_i.filter(x => !ann_i.has(x)));
-            res.send({'new': Array.from(difference), 'old': Array.from(intersection)});
+app.get('/getincinfo', isAuthenticated, function(req, res) {
+    if (!req.param('inc')){
+        req.send("Not OK. You have to supply an incident.");
+    } else{
+        client.get('incinitstr:' + req.param('inc'), function(err, reply){
+            res.send(reply);
         });
-        }
-    });
+    }
+});
+
+app.get('/listincidents', isAuthenticated, function(req, res){
+    if (!req.param('task') || (req.param('task')!='men' && req.param('task')!='str')) {
+        res.send("Not OK. Such task does not exist. Choose either men or str.");
+    } else {
+        if (req.param('task')=='men')
+            var all_pattern = 'incstr:';
+        else
+            var all_pattern = 'incinitstr:';
+        client.keys(all_pattern + '*', function (err, all_incs) {
+            var user = req.user.user;
+            var task = req.param('task');
+            var ann_pattern = task + ":" + user + ":";
+            client.keys(ann_pattern + '*', function (err, ann_incs) {
+                var all_i = all_incs.map(function(x) { return x.replace(all_pattern, '');});
+                var ann_i = new Set(ann_incs.map(function(x) { return x.split(':')[3];}));
+                var intersection = new Set(all_i.filter(x => ann_i.has(x)));
+                var difference = new Set(all_i.filter(x => !ann_i.has(x)));
+                res.send({'new': Array.from(difference), 'old': Array.from(intersection)});
+            });
+        });
+    }
 });
 
 var isAdmin = function (u){
