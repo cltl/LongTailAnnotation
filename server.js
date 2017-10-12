@@ -149,6 +149,7 @@ app.get('/exportannotations', isAuthenticated, function(req, res){
         client.keys(ann_pattern + '*', function(err, ann_incs){
             var annJson = {};
             var cnt = 0;
+            if (!ann_incs.length) res.send(annotator + " has no annotations yet.");
             ann_incs.forEach(function (reply, index) {
                 var incId=reply.split(':')[3];
                 client.get(reply, function(err, data){
@@ -164,7 +165,7 @@ app.get('/exportannotations', isAuthenticated, function(req, res){
                 });
             });                
         });
-    }
+    } else res.send({});
 });
 
 app.get('/getstrdata', isAuthenticated, function(req, res){
@@ -214,7 +215,7 @@ app.post('/storeannotations', function(req, res) {
         var task = req.param('task');
         var user = req.user.user;
         var rkey = task + ':' + user + ':ann:' + req.param('incident');
-        logAction(req.user.user, "UPDATE ANNOTATIONS");
+        logAction(req.user.user, "UPDATE ANNOTATIONS, TASK=" + task);
         client.set(rkey, JSON.stringify(req.param('annotations')));
         res.send("OK");
     } else {
@@ -228,8 +229,22 @@ app.post('/storedisqualified', function(req, res) {
         var task = req.param('task');
         var user = req.user.user;
         var rkey = task + ':' + user + ':dis:' + req.param('incident');
-        logAction(req.user.user, "UPDATE DISQUALIFIED");
+        logAction(req.user.user, "UPDATE DISQUALIFIED, TASK=" + task);
         client.set(rkey, JSON.stringify(req.param('disqualification') || []));
+        res.send("OK");
+    } else {
+        res.send("Not OK: incident id not specified, or no documents listed");
+    }
+});
+
+// TODO: check if the incident is valid
+app.post('/storereftexts', function(req, res) {
+    if (req.param('task') && req.param('incident')){
+        var task = req.param('task');
+        var user = req.user.user;
+        var rkey = task + ':' + user + ':txt:' + req.param('incident');
+        logAction(req.user.user, "UPDATE REFTEXTS, TASK=" + task);
+        client.set(rkey, JSON.stringify(req.param('documents') || []));
         res.send("OK");
     } else {
         res.send("Not OK: incident id not specified, or no documents listed");
@@ -261,6 +276,20 @@ app.post('/loaddisqualified', function(req, res){
         res.send("Not OK: incident id not specified");
     }
 });
+
+app.post('/loadreftexts', function(req, res){
+    if (req.param('incident') && req.param('task')){
+        var task = req.param('task');
+        var user = req.user.user;
+        var rkey = task + ':' + user + ':txt:' + req.param('incident');
+        client.get(rkey, function(err, data){
+            if (!err) res.send(JSON.parse(data));
+        });
+    } else {
+        res.send("Not OK: incident id not specified");
+    }
+});
+
 
 passport.use(new LocalStrategy(
   function(username, password, done) {

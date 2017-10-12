@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+<link rel="stylesheet" href="/annotations.css" type="text/css">
 </head>
 <body>
 <div class="container">
@@ -39,6 +40,31 @@
 </div>
 <div class="row" id="bigdiv">
     <div id="pnlLeft" class="col-sm-12"></div>
+</div>
+<div class="row">
+<span class="col-sm-12" id="addedTxts"></span>
+</div>
+<div class="row" id="newDoc">
+    <div class="col-sm-12">
+        <h3>Add a reference text</h3>
+    </div>
+        <div class="col-sm-7">
+            <label>Title</label>
+            <input id="newTitle" class="form-control" />
+        </div><div class="col-sm-3">
+            <label>Publishing time</label>
+            <input type="date" id="newDct" class="form-control"/>
+        </div>
+        <div class="col-sm-2">
+            <br/><br/>
+            <button class="btn btn-info btn-ann" onclick="addText()">Add Document</button>
+        </div>
+    <div class="col-sm-12">
+        <label>Source URL</label>
+        <input id="newSource" class="form-control" />
+        <label>Document text</label>
+        <textarea id="newBody" class="form-control" rows="20"></textarea>
+    </div>
 </div>
 </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>

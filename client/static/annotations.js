@@ -1,6 +1,7 @@
 $(function(){
 
     disqualification = [];
+    refDocs = [];
     $(".ann-input").hide();
     if (document.title=="Mention Annotation"){ 
         task = 'men';
@@ -36,6 +37,7 @@ $(function(){
     else {
         task = 'str';
         $("#strann").hide();
+        $("#newDoc").hide();
     }
     $.get('/listincidents', {'task': task}, function(unsorted, status) {
         var old_inc = unsorted['old'];
@@ -69,11 +71,21 @@ var getExistingAnnotations = function(fn, task, cb){
     });
 }
 
-var getExistingDisqualified = function(fn, cb){
-    $.post('/loaddisqualified', {'task': 'men', 'incident': fn}, function(data, status){
+var getExistingDisqualified = function(fn, task, cb){
+    $.post('/loaddisqualified', {'task': task, 'incident': fn}, function(data, status){
          if (!data) {console.log('no data'); disqualification=[];}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
             disqualification=data;
+        }
+       cb(data);
+    });
+}
+
+var getExistingRefDocs = function(inc, task, cb){
+    $.post('/loadreftexts', {'task': task, 'incident': inc}, function(data, status){
+         if (!data) {console.log('no data'); refDocs=[];}//"s": [], "b": [], "i": [], "h": [], "d": []};}
+         else {
+            refDocs=data;
         }
        cb(data);
     });
@@ -131,8 +143,8 @@ var storeAndReload = function(annotations, mwu = false){
     });
 }
 
-var storeDisqAndReload = function(){
-    $.post("/storedisqualified", {'disqualification': disqualification, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
+var storeDisqAndReload = function(task){
+    $.post("/storedisqualified", {'disqualification': disqualification, 'task': task, 'incident': $("#pickfile").val()}, function(data, status){
         alert("Disqualified articles updated.");
 //        loadTextsFromFile($("#pickfile").val());
     });
@@ -238,16 +250,17 @@ var titleToken = function(tid){
     return tid.split('.')[1][0]=='t';
 }
 
-var toggleDisqualify = function(d){
-    if (!$("#" + d).hasClass("disqualified")) { $("#" + d).addClass("disqualified"); $('#btn' + d).html("Mark relevant"); disqualification.push(d); storeDisqAndReload(); }  
-    else { $("#" + d).removeClass("disqualified"); $('#btn' + d).html("Mark non-relevant"); var index = disqualification.indexOf(d); if (index > -1) { disqualification.splice(index, 1);} storeDisqAndReload();}
+var toggleDisqualify = function(d, task){
+    if (!$("#" + d).hasClass("disqualified")) { $("#" + d).addClass("disqualified"); $('#btn' + d).html("Mark relevant"); disqualification.push(d); storeDisqAndReload(task); }  
+    else { $("#" + d).removeClass("disqualified"); $('#btn' + d).html("Mark non-relevant"); var index = disqualification.indexOf(d); if (index > -1) { disqualification.splice(index, 1);} storeDisqAndReload(task);}
 }
 
 var loadTextsFromFile = function(fn){
     $("#pnlLeft").html("");
+    var task = 'men';
     $.get("/gettext", {'inc': fn}, function(data, status) {
-        getExistingAnnotations(fn, 'men', function(annotated){
-        getExistingDisqualified(fn, function(disqualified){
+        getExistingAnnotations(fn, task, function(annotated){
+        getExistingDisqualified(fn, task, function(disqualified){
         var all_html = ""; 
         var c=0;
         for (var k in data) {
@@ -269,8 +282,8 @@ var loadTextsFromFile = function(fn){
             if (disq) var header = "<div class=\"panel panel-default disqualified\" id=\"" + k + "\">";
             else var header = "<div class=\"panel panel-default\" id=\"" + k + "\">";
             header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + title + "&nbsp;(<i>Published on: <span id=" + k + "dct>" + data[k]['DCT'] + "</span></i>) "; 
-            if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\')\">Mark non-relevant</button>";
-            else header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\')\">Mark relevant</button>";
+            if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\', \'" + task + "\')\">Mark non-relevant</button>";
+            else header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\', \'" + task + "\')\">Mark relevant</button>";
 
 
 
@@ -313,11 +326,22 @@ var getStructuredData = function(inc) {
     });
 }
 
+var refTextsInfo = function(refTxts){
+    var sources = "";
+    $(refTxts).each(function(index,value){ 
+        sources+="<a href=\'" + value.source + "\'>article" + (index+1).toString() + "</a> ";
+    });
+    $("#addedTxts").html("Manually added reference texts for this incident: " + refTxts.length.toString() + " (" + sources + ")");
+}
+
 var getAllInfo = function(inc){
-    var doc_id = inc + "#1";
+    var doc_id = inc + "_1";
     $.get("/getincinfo", {'inc': inc}, function(data, status) {
         var d = JSON.parse(data);
-        getExistingAnnotations(inc, 'str', function(str_anns){ 
+        var task = 'str';
+        getExistingAnnotations(inc, task, function(str_anns){ 
+            getExistingDisqualified(inc, task, function(disqualified){
+            getExistingRefDocs(inc, task, function(refTxts){
             if (str_anns){
                 $("#location").val(str_anns["location"]);
                 $("#incidentTime").val(str_anns["time"]);
@@ -325,14 +349,23 @@ var getAllInfo = function(inc){
                 $("#location").val(d["estimated_location"]);
                 $("#incidentTime").val(d["estimated_incident_date"]);
             }
+            if (!disqualified || disqualified.indexOf(doc_id)==-1) var disq = false;
+            else var disq = true;
+
             $("#pnlLeft").html("");
             var article = d['articles'][0];
-            var header = "<div class=\"panel panel-default\" id=\"" + doc_id + "\">";
-            var body = "<div class=\"panel-body\">" + article['body'] + "</div>";
-
+            if (disq) var header = "<div class=\"panel panel-default disqualified\" id=\"" + doc_id + "\">";
+            else var header = "<div class=\"panel panel-default\" id=\"" + doc_id + "\">";
             header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + article['title'] + "&nbsp;(<i>Published on: <span id=" + doc_id + "dct>" + article['dct'] + "</span></i>) ";
+            if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark non-relevant</button>";
+            else header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark relevant</button>";
+
             header += "</h4></div>";
+            var body = "<div class=\"panel-body\">" + article['body'] + "</div>";
             $("#pnlLeft").html(header + body);
+            refTextsInfo(refTxts);
+            });
+            });
         });
     });
 }
@@ -349,6 +382,7 @@ var loadIncident = function(task){
             loadTextsFromFile(inc);
         } else { //structured data annotation
             getAllInfo(inc);
+            $("#newDoc").show();
         }
         //$("#bigdiv").height("350px");
 
@@ -366,4 +400,21 @@ var saveStructuredAnnotation = function(){
 //        $("#pickfile").val("-1");
 //        $("#pnlLeft").html("");
     });
+}
+
+var addText = function(){
+    var title = $("#newTitle").val();
+    var dct = $("#newDct").val();
+    var source = $("#newSource").val();
+    var content = $("#newBody").val();
+    if (title && content && dct && source){
+        var newDoc = {'title': title, 'content': content, 'dct': dct, 'source': source};
+        refDocs.push(newDoc);
+        $.post("/storereftexts", {'documents': refDocs, 'task': 'str', 'incident': $("#pickfile").val()}, function(data, status){
+            alert("Reference text stored. Now re-loading");
+            location.reload();
+        });
+    } else{
+        printInfo("Please fill all fields for the new reference text: TITLE, DCT, SOURCE URL, and CONTENT/BODY.");
+    }
 }
