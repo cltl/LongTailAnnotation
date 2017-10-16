@@ -63,8 +63,10 @@ var clearSelection = function(){
 
 var getExistingAnnotations = function(fn, task, cb){
     $.post('/loadannotations', {'task': task, 'incident': fn}, function(data, status){
-         if (!data) {console.log('no data'); annotations={};}//"s": [], "b": [], "i": [], "h": [], "d": []};}
+         if (!data) {console.log('There are no previous annotations of mentions done by this user for this incident.'); annotations={};}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
+            console.log("Loaded previous annotations of mentions!"); // + data.length.toString() + " annotations for this incident by this user.");
+            console.log(data);
             annotations=data;
         } 
        cb(data);
@@ -73,8 +75,10 @@ var getExistingAnnotations = function(fn, task, cb){
 
 var getExistingDisqualified = function(fn, task, cb){
     $.post('/loaddisqualified', {'task': task, 'incident': fn}, function(data, status){
-         if (!data) {console.log('no data'); disqualification=[];}//"s": [], "b": [], "i": [], "h": [], "d": []};}
+         if (!data) {console.log('There are no previous disqualifications done by this user for this incident.'); disqualification=[];}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
+            console.log("Loaded previous disqualifications!"); // + data.length.toString() + " annotations for this incident by this user.");
+            console.log(data);
             disqualification=data;
         }
        cb(data);
@@ -219,10 +223,13 @@ var saveEvent = function(mwu){
             //annotations[event_type].push(all);
             for (var i=0; i<allMentions.length; i++){
                 var mention=allMentions[i];
+                console.log(annotations);
                 annotations[mention]={'cardinality': cardinality, 'eventtype': event_type, 'participants': allParticipants};
+                console.log(annotations);
                 if (mwu){
                     annotations[mention]["mwu"] = allMentions;
                 }
+                console.log(annotations);
             }
             storeAndReload(annotations, mwu);
             }

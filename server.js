@@ -30,7 +30,7 @@ app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(expressSession({secret: 'mySecretKey'}));
 app.use(passport.initialize())  
-app.use(passport.session())  
+app.use(passport.session());  
 
 var flash = require('connect-flash');
 app.use(flash());
@@ -58,7 +58,7 @@ app.get('/structured', isAuthenticated, function(req, res){
 });
 
 app.get('/gettext', isAuthenticated, function(req, res){
-    var incident = req.param('inc');
+    var incident = req.query['inc'];
     var doc = '';
     client.get('incque:' + incident, function(err, reply){
         if (!err) doc=JSON.parse(reply)[0];
@@ -106,26 +106,26 @@ app.get('/gettext', isAuthenticated, function(req, res){
 });
 
 app.get('/getincinfo', isAuthenticated, function(req, res) {
-    if (!req.param('inc')){
-        req.send("Not OK. You have to supply an incident.");
+    if (!req.query['inc']){
+        res.sendStatus(400);//("Not OK: incident id not specified");
     } else{
-        client.get('incinitstr:' + req.param('inc'), function(err, reply){
+        client.get('incinitstr:' + req.query['inc'], function(err, reply){
             res.send(reply);
         });
     }
 });
 
 app.get('/listincidents', isAuthenticated, function(req, res){
-    if (!req.param('task') || (req.param('task')!='men' && req.param('task')!='str')) {
-        res.send("Not OK. Such task does not exist. Choose either men or str.");
+    if (!req.query['task'] || (req.query['task']!='men' && req.query['task']!='str')) {
+        res.sendStatus(400);//("Not OK: incident id not specified");
     } else {
-        if (req.param('task')=='men')
+        if (req.query['task']=='men')
             var all_pattern = 'incstr:';
         else
             var all_pattern = 'incinitstr:';
         client.keys(all_pattern + '*', function (err, all_incs) {
             var user = req.user.user;
-            var task = req.param('task');
+            var task = req.query['task'];
             var ann_pattern = task + ":" + user + ":";
             client.keys(ann_pattern + '*', function (err, ann_incs) {
                 var all_i = all_incs.map(function(x) { return x.replace(all_pattern, '');});
@@ -143,8 +143,8 @@ var isAdmin = function (u){
 }
 
 app.get('/exportannotations', isAuthenticated, function(req, res){
-    if (req.param('annotator') && isAdmin(req.user.user)){
-        var annotator = req.param('annotator');
+    if (req.query['annotator'] && isAdmin(req.user.user)){
+        var annotator = req.query['annotator'];
         var ann_pattern = "men:" + annotator + ":ann:";
         client.keys(ann_pattern + '*', function(err, ann_incs){
             var annJson = {};
@@ -165,11 +165,11 @@ app.get('/exportannotations', isAuthenticated, function(req, res){
                 });
             });                
         });
-    } else res.send({});
+    } else res.sendStatus(400);
 });
 
 app.get('/getstrdata', isAuthenticated, function(req, res){
-    var inc = req.param('inc');
+    var inc = req.query['inc'];
     client.get('incstr:' + inc, function(err, result){
         var jsonresult = JSON.parse(result);
         //result['participants'] = result['participants'].map(function(x) { return x.replace('incstr:', '');});
@@ -180,11 +180,11 @@ app.get('/getstrdata', isAuthenticated, function(req, res){
 
 // TODO: make sure it also works for structured data
 app.get('/userstats', isAuthenticated, function(req, res){
-    if (!req.param('task') || (req.param('task')!='men' && req.param('task')!='str')) {
-        res.send("Not OK. Such task does not exist. Choose either men or str.");
+    if (!req.query['task'] || (req.query['task']!='men' && req.query['task']!='str')) {
+        res.sendStatus(400);//("Not OK: incident id not specified");
     } else {
     var user = req.user.user;
-    var task = req.param('task');
+    var task = req.query['task'];
     var rkey_pattern = task + ":" + user + ":ann:*";
     client.keys(rkey_pattern, function (err, replies) {
         // NOTE: code in this callback is NOT atomic
@@ -211,82 +211,83 @@ app.get('/userstats', isAuthenticated, function(req, res){
 
 // TODO: check if the incident is valid
 app.post('/storeannotations', function(req, res) {
-    if (req.param('task') && req.param('incident') && req.param('annotations')){
-        var task = req.param('task');
+    if (req.body.task && req.body.incident && req.body.annotations){
+        var task = req.body.task;
         var user = req.user.user;
-        var rkey = task + ':' + user + ':ann:' + req.param('incident');
+        var rkey = task + ':' + user + ':ann:' + req.body.incident;
         logAction(req.user.user, "UPDATE ANNOTATIONS, TASK=" + task);
-        client.set(rkey, JSON.stringify(req.param('annotations')));
-        res.send("OK");
+        client.set(rkey, JSON.stringify(req.body.annotations));
+        res.sendStatus(200);
     } else {
-        res.send("Not OK: incident id not specified, or no documents listed");
+        res.sendStatus(400);//("Not OK: incident id not specified");
+        //res.send("Not OK: incident id not specified, or no documents listed");
     }
 });
 
 // TODO: check if the incident is valid
 app.post('/storedisqualified', function(req, res) {
-    if (req.param('task') && req.param('incident')){
-        var task = req.param('task');
+    if (req.body.task && req.body.incident){
+        var task = req.body.task;
         var user = req.user.user;
-        var rkey = task + ':' + user + ':dis:' + req.param('incident');
+        var rkey = task + ':' + user + ':dis:' + req.body.incident;
         logAction(req.user.user, "UPDATE DISQUALIFIED, TASK=" + task);
-        client.set(rkey, JSON.stringify(req.param('disqualification') || []));
-        res.send("OK");
+        client.set(rkey, JSON.stringify(req.body.disqualification || []));
+        res.sendStatus(200);
     } else {
-        res.send("Not OK: incident id not specified, or no documents listed");
+        res.sendStatus(400);//("Not OK: incident id not specified");
     }
 });
 
 // TODO: check if the incident is valid
 app.post('/storereftexts', function(req, res) {
-    if (req.param('task') && req.param('incident')){
-        var task = req.param('task');
+    if (req.body.task && req.body.incident){
+        var task = req.body.task;
         var user = req.user.user;
-        var rkey = task + ':' + user + ':txt:' + req.param('incident');
+        var rkey = task + ':' + user + ':txt:' + req.body.incident;
         logAction(req.user.user, "UPDATE REFTEXTS, TASK=" + task);
-        client.set(rkey, JSON.stringify(req.param('documents') || []));
-        res.send("OK");
+        client.set(rkey, JSON.stringify(req.body.documents || []));
+        res.sendStatus(200);
     } else {
-        res.send("Not OK: incident id not specified, or no documents listed");
+        res.sendStatus(400);//("Not OK: incident id not specified");
     }
 });
 
 app.post('/loadannotations', function(req, res){
-    if (req.param('incident') && req.param('task')){
-        var task = req.param('task');
+    if (req.body.incident && req.body.task){
+        var task = req.body.task;
         var user = req.user.user;
-        var rkey = task + ':' + user + ':ann:' + req.param('incident');
+        var rkey = task + ':' + user + ':ann:' + req.body.incident;
         client.get(rkey, function(err, data){ 
             if (!err) res.send(JSON.parse(data));
         });
     } else {
-        res.send("Not OK: incident id not specified");
+        res.sendStatus(400);//"Not OK: incident id not specified");
     }
 });
 
 app.post('/loaddisqualified', function(req, res){
-    if (req.param('incident') && req.param('task')){
-        var task = req.param('task');
+    if (req.body.incident && req.body.task){
+        var task = req.body.task;
         var user = req.user.user;
-        var rkey = task + ':' + user + ':dis:' + req.param('incident');
+        var rkey = task + ':' + user + ':dis:' + req.body.incident;
         client.get(rkey, function(err, data){
             if (!err) res.send(JSON.parse(data));
         });
     } else {
-        res.send("Not OK: incident id not specified");
+        res.sendStatus(400);//("Not OK: incident id not specified");
     }
 });
 
 app.post('/loadreftexts', function(req, res){
-    if (req.param('incident') && req.param('task')){
-        var task = req.param('task');
+    if (req.body.incident && req.body.task){
+        var task = req.body.task;
         var user = req.user.user;
-        var rkey = task + ':' + user + ':txt:' + req.param('incident');
+        var rkey = task + ':' + user + ':txt:' + req.body.incident;
         client.get(rkey, function(err, data){
             if (!err) res.send(JSON.parse(data));
         });
     } else {
-        res.send("Not OK: incident id not specified");
+        res.sendStatus(400);//("Not OK: incident id not specified");
     }
 });
 
@@ -328,7 +329,7 @@ app.post('/login',
   function(req, res) {
     //res.redirect('/dash');
     logAction(req.user.user, "LOGIN");
-    res.send(200);
+    res.sendStatus(200);
   });
 
 // =====================================
