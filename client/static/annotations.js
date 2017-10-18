@@ -45,13 +45,20 @@ $(function(){
         var new_inc = unsorted['new'];
         var old_sorted = old_inc.sort();
         var new_sorted = new_inc.sort();
+        var trial_incidents = ['761837', '759131', '739413', '773797']
         $('#pickfile').append($('<option></option>').val('-1').html("--INCIDENTS YOU'VE WORKED ON--").prop('disabled', true));
         for(var i = 0; i < old_sorted.length; i++) {
+            if (trial_incidents.indexOf(old_sorted[i])>-1) continue;
             $('#pickfile').append($('<option></option>').val(old_sorted[i]).html(old_sorted[i]));
         }
         $('#pickfile').append($('<option></option>').val('-1').html("--OTHER INCIDENTS--").prop('disabled', true));
         for(var i = 0; i < new_sorted.length; i++) {
+            if (trial_incidents.indexOf(new_sorted[i])>-1) continue;
             $('#pickfile').append($('<option></option>').val(new_sorted[i]).html(new_sorted[i]));
+        }
+        $('#pickfile').append($('<option></option>').val('-1').html("--TRIAL DATA INCIDENTS--").prop('disabled', true));
+        for(var i = 0; i < trial_incidents.length; i++) {
+            $('#pickfile').append($('<option></option>').val(trial_incidents[i]).html(trial_incidents[i]));
         }
     });
 }); // This is where the load function ends!
@@ -67,7 +74,6 @@ var getExistingAnnotations = function(fn, task, cb){
          if (!data) {console.log('There are no previous annotations of mentions done by this user for this incident.'); annotations={};}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
             console.log("Loaded previous annotations of mentions!"); // + data.length.toString() + " annotations for this incident by this user.");
-            console.log(data);
             annotations=data;
         } 
        cb(data);
@@ -79,7 +85,6 @@ var getExistingDisqualified = function(fn, task, cb){
          if (!data) {console.log('There are no previous disqualifications done by this user for this incident.'); disqualification=[];}//"s": [], "b": [], "i": [], "h": [], "d": []};}
          else {
             console.log("Loaded previous disqualifications!"); // + data.length.toString() + " annotations for this incident by this user.");
-            console.log(data);
             disqualification=data;
         }
        cb(data);
@@ -225,13 +230,10 @@ var saveEvent = function(mwu){
             //annotations[event_type].push(all);
             for (var i=0; i<allMentions.length; i++){
                 var mention=allMentions[i];
-                console.log(annotations);
                 annotations[mention]={'cardinality': cardinality, 'eventtype': event_type, 'participants': allParticipants};
-                console.log(annotations);
                 if (mwu){
                     annotations[mention]["mwu"] = allMentions;
                 }
-                console.log(annotations);
             }
             storeAndReload(annotations, mwu);
             }
@@ -380,25 +382,43 @@ var getAllInfo = function(inc){
     });
 }
 
+var getSpanTextById = function(ann_key){
+    return $("#" + ann_key.replace(/\./g,'\\.')).html().split('<sub>')[0];
+}
+
 var uniqueChains = function(){
-    var my_set = [];
+    var chains = {};
+    var to_skip = [];
     for (ann_key in annotations){
-        my_set.push(annotations[ann_key]);
+        var element = annotations[ann_key];
+        var this_chain = [element["eventtype"], element["participants"] || "NONE", element["cardinality"]].join('#');
+        if (!element["mwu"])
+            var text = getSpanTextById(ann_key);
+        else {
+            if (to_skip.indexOf(ann_key)>-1) continue;
+            var textArray = [];
+            var mwus = element['mwu'];
+            for (var i=0; i<mwus.length; i++){
+                textArray.push(getSpanTextById(mwus[i]));
+                to_skip.push(mwus[i]);
+            }
+            var text = textArray.join(" ");
+        }
+        if (this_chain in chains)
+            chains[this_chain].push(text);
+        else chains[this_chain]=[text];
     }
-    return my_set;
+    return chains;
 }
 
 var showTrails = function(){
     var chains = uniqueChains();
     var items = [];
-    var all_ids
-    chains.forEach(function(element){
-        var my_item = '<li class="bolded event_' + element["eventtype"] + '">' + [element["eventtype"], element["participants"] || "NONE", element["cardinality"]].join("#") + '</li>';
-        if (items.indexOf(my_item)==-1)
-            items.push(my_item);
-    //items.push('<li>Test you</li>');
-    });
-    $("#trails").empty().html(items.join(""));
+    for (chain in chains) {
+        var my_item = '<span class="bolded event_' + chain[0] + '">' + chain + '<br/>(' + chains[chain].join(',') + ')</span>';
+        items.push(my_item);
+    }
+    $("#trails").empty().html(items.join("<br/>"));
 }
 
 // Load incident - both for mention and structured annotation
