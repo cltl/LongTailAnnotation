@@ -3,6 +3,10 @@ html,body{
     height: 100%;
 }
 
+.bolded{
+    font-weight: bold;
+}
+
 #addedTxts{
     background: #fffff0;
     font-weight: bold;
@@ -20,7 +24,7 @@ div.disqualified * {
     color: #999;
 }
 
-#bigdiv{
+#pnlLeft{
     overflow-y: scroll;
 }
 

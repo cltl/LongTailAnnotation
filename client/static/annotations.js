@@ -33,6 +33,7 @@ $(function(){
 		    $('span').removeClass("active");
 		    $(this).toggleClass("inactive");      //add the class to the clicked element
 		});
+        $("#pnlRight").hide();
     }
     else {
         task = 'str';
@@ -144,6 +145,7 @@ var storeAndReload = function(annotations, mwu = false){
         //loadTextsFromFile($("#pickfile").val());
         reloadInside(mwu);
         defaultValues();
+        showTrails();
     });
 }
 
@@ -302,6 +304,7 @@ var loadTextsFromFile = function(fn){
         }
         $("#pnlLeft").html(all_html);
 
+        showTrails();
         $("#bigdiv").height($(window).height()-($("#pickrow").height() + $("#titlerow").height()+$("#annrow").height())-20);
         //$("#pnlRight").html(all_html["r"]);
         return all_html;
@@ -377,6 +380,27 @@ var getAllInfo = function(inc){
     });
 }
 
+var uniqueChains = function(){
+    var my_set = [];
+    for (ann_key in annotations){
+        my_set.push(annotations[ann_key]);
+    }
+    return my_set;
+}
+
+var showTrails = function(){
+    var chains = uniqueChains();
+    var items = [];
+    var all_ids
+    chains.forEach(function(element){
+        var my_item = '<li class="bolded event_' + element["eventtype"] + '">' + [element["eventtype"], element["participants"] || "NONE", element["cardinality"]].join("#") + '</li>';
+        if (items.indexOf(my_item)==-1)
+            items.push(my_item);
+    //items.push('<li>Test you</li>');
+    });
+    $("#trails").empty().html(items.join(""));
+}
+
 // Load incident - both for mention and structured annotation
 var loadIncident = function(task){
     var inc = $("#pickfile").val();
@@ -387,6 +411,7 @@ var loadIncident = function(task){
         if (task=='men'){
             getStructuredData(inc);
             loadTextsFromFile(inc);
+            $("#pnlRight").show();
         } else { //structured data annotation
             getAllInfo(inc);
             $("#newDoc").show();
