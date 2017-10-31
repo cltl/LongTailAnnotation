@@ -27,6 +27,13 @@ def any_empty_names(participants):
             return True
     return False
 
+def count_suspects(participants):
+    c=0
+    for p in participants:
+        if p['Type'].strip()=='Subject-Suspect':
+            c+=1
+    return c
+
 inc2que = build_inc2que()
 new_inc2que = {}
 allf=pd.read_pickle(fle)
@@ -49,22 +56,24 @@ for index, row in allf.iterrows():
     if any_empty_names(row['participants']): 
         empty_part+=1
         continue
-
+#    suspects=count_suspects(row['participants'])
+#    if suspects>1:
+#        print(incident_id, suspects)
     new_inc2que[incident_id]=inc2que[incident_id]
 
     dockey = 'incdoc:%s' % incident_id
-    r.set(dockey, json.dumps(docs))
+#    r.set(dockey, json.dumps(docs))
 
     strkey = 'incstr:%s' % incident_id
     rval = row.to_json()
-    r.set(strkey, json.dumps(rval))
+#    r.set(strkey, json.dumps(rval))
 
 
 print(len(new_inc2que), bad_docs_num, too_many_part, empty_part)
 for k,v in new_inc2que.items():
     quekey = 'incque:%s' % k
     #print(k, v)
-    r.set(quekey, json.dumps(list(v)))
+#    r.set(quekey, json.dumps(list(v)))
 
 with open('new_inc2que.bin', 'wb') as outfile:
     pickle.dump(new_inc2que, outfile)

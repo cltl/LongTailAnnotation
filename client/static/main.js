@@ -18,8 +18,20 @@ $(function(){
     }
 });
 
-var downloadAnnotations = function(u){
-    window.open('/exportannotations?annotator=' + u);
+var downloadStructuredDisq = function(u){
+    downloadAnnotations(u, 'str', 'dis');
+}
+
+var downloadStructuredAnnotations = function(u){
+    downloadAnnotations(u, 'str', 'ann');
+}
+
+var downloadMentionAnnotations = function(u){
+    downloadAnnotations(u, 'men', 'ann');
+}
+
+var downloadAnnotations = function(u, task, ann){
+    window.open('/exportannotations?task=' + task + '&annotator=' + u + '&ann=' + ann);
     //$.get('/exportannotations', {'annotator': u}, function(data, status){
         
     //});

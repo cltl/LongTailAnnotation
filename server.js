@@ -143,9 +143,11 @@ var isAdmin = function (u){
 }
 
 app.get('/exportannotations', isAuthenticated, function(req, res){
-    if (req.query['annotator'] && isAdmin(req.user.user)){
+    if (req.query['annotator'] && req.query['task'] && req.query['ann'] && isAdmin(req.user.user)){
         var annotator = req.query['annotator'];
-        var ann_pattern = "men:" + annotator + ":ann:";
+        var task = req.query['task'];
+        var ann = req.query['ann'];
+        var ann_pattern = task + ":" + annotator + ":" + ann + ":";
         client.keys(ann_pattern + '*', function(err, ann_incs){
             var annJson = {};
             var cnt = 0;
@@ -155,7 +157,7 @@ app.get('/exportannotations', isAuthenticated, function(req, res){
                 client.get(reply, function(err, data){
                     annJson[incId]=JSON.parse(data);
                     if (++cnt==ann_incs.length) {
-                        res.setHeader('Content-disposition', 'attachment; filename= ann_' + annotator + '.json');
+                        res.setHeader('Content-disposition', 'attachment; filename=' + ann + '_' + annotator + '_' + task + '.json');
                         res.setHeader('Content-type', 'application/json');
                         res.write(JSON.stringify(annJson), function (err) {
                             res.end();
