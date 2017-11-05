@@ -39,6 +39,27 @@ $(function(){
         task = 'str';
         $("#strann").hide();
         $("#newDoc").hide();
+        create_datepicker("day", 'yyyy-mm-dd');
+        create_datepicker("month", 'yyyy-mm');
+        create_datepicker("year", 'yyyy');
+	$("#pickday").change(function(){
+		if($("#pickday").val()!=""){
+		    $("#pickmonth").prop('disabled', true);
+		    $("#pickyear").prop('disabled', true);
+		} else {
+                    $("#pickmonth").prop('disabled', false);
+                    $("#pickyear").prop('disabled', false);
+		}
+	});
+        $("#pickmonth").change(function(){
+               if($("#pickmonth").val()!=""){
+                    $("#pickyear").prop('disabled', true);
+                } else {
+                    $("#pickyear").prop('disabled', false);
+                }
+
+	});
+	create_datepicker("day", "yyyy-mm-dd", "newDct");
     }
     $.get('/listincidents', {'task': task}, function(unsorted, status) {
         var old_inc = unsorted['old'];
@@ -78,6 +99,17 @@ var getExistingAnnotations = function(fn, task, cb){
         } 
        cb(data);
     });
+}
+
+var create_datepicker = function(granularity, format, manualId=""){
+        if (!manualId) var myId="pick" + granularity;
+	else var myId=manualId;
+        $('#' + myId).datepicker({
+            autoclose: true,
+	    viewMode: granularity + 's',
+            minViewMode: granularity + 's',
+            format: format
+        });
 }
 
 var getExistingDisqualified = function(fn, task, cb){
@@ -354,12 +386,14 @@ var getAllInfo = function(inc){
         getExistingAnnotations(inc, task, function(str_anns){ 
             getExistingDisqualified(inc, task, function(disqualified){
             getExistingRefDocs(inc, task, function(refTxts){
+            $(".datepicker").datepicker("update", '');
             if (str_anns){
                 $("#location").val(str_anns["location"]);
-                $("#incidentTime").val(str_anns["time"]);
+                $('#pickday').datepicker("update", str_anns["time"]);//.datepicker('update');;
             } else{
                 $("#location").val(d["estimated_location"]);
-                $("#incidentTime").val(d["estimated_incident_date"]);
+                $('#pickday').datepicker("update", d["estimated_incident_date"]);//.datepicker('update');;
+                //$("#pickday").val(d["estimated_incident_date"]);
             }
             if (!disqualified || disqualified.indexOf(doc_id)==-1) var disq = false;
             else var disq = true;
@@ -443,8 +477,12 @@ var loadIncident = function(task){
     }
 }
 
+var getAnnotatedDate=function(){
+    return $("#pickday").val() || $("#pickmonth").val() || $("#pickyear").val();
+}
+
 var saveStructuredAnnotation = function(){
-    var str_ann = {"time": $("#incidentTime").val(), "location": $("#location").val()};
+    var str_ann = {"time": getAnnotatedDate(), "location": $("#location").val()};
     $.post("/storeannotations", {'annotations': str_ann, 'task': 'str', 'incident': $("#pickfile").val()}, function(data, status){
         alert("Annotation saved. Now re-loading");
         location.reload();
