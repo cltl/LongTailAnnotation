@@ -379,7 +379,6 @@ var refTextsInfo = function(refTxts){
 }
 
 var getAllInfo = function(inc){
-    var doc_id = inc + "_1";
     $.get("/getincinfo", {'inc': inc}, function(data, status) {
         var d = JSON.parse(data);
         var task = 'str';
@@ -395,20 +394,27 @@ var getAllInfo = function(inc){
                 $('#pickday').datepicker("update", d["estimated_incident_date"]);//.datepicker('update');;
                 //$("#pickday").val(d["estimated_incident_date"]);
             }
-            if (!disqualified || disqualified.indexOf(doc_id)==-1) var disq = false;
-            else var disq = true;
 
+            var allHtml="";
             $("#pnlLeft").html("");
-            var article = d['articles'][0];
-            if (disq) var header = "<div class=\"panel panel-default disqualified\" id=\"" + doc_id + "\">";
-            else var header = "<div class=\"panel panel-default\" id=\"" + doc_id + "\">";
-            header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + article['title'] + "&nbsp;(<i>Published on: <span id=" + doc_id + "dct>" + article['dct'] + "</span></i>) ";
-            if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark non-relevant</button>";
-            else header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark relevant</button>";
+            for (var i=0; i<d['articles'].length; i++){
+                var body="";
+                var header="";
+                var doc_id = inc + "_" + (i+1).toString();
+                if (!disqualified || disqualified.indexOf(doc_id)==-1) var disq = false;
+                else var disq = true;
 
-            header += "</h4></div>";
-            var body = "<div class=\"panel-body\">" + article['body'] + "</div>";
-            $("#pnlLeft").html(header + body);
+                var article = d['articles'][i];
+                if (disq) header = "<div class=\"panel panel-default disqualified\" id=\"" + doc_id + "\">";
+                else header = "<div class=\"panel panel-default\" id=\"" + doc_id + "\">";
+                header += "<div class=\"panel-heading\"><h4 class=\"panel-title\">" + article['title'] + "&nbsp;(<i>Published on: <span id=" + doc_id + "dct>" + article['dct'] + "</span></i>) ";
+                if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark non-relevant</button>";
+                else header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark relevant</button>";
+                header += "</h4></div>";
+                body = "<div class=\"panel-body\">" + article['body'] + "</div>";
+                allHtml += header + body;
+            }
+            $("#pnlLeft").html(allHtml);
             refTextsInfo(refTxts);
             });
             });
