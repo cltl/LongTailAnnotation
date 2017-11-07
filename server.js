@@ -213,14 +213,23 @@ app.get('/userstats', isAuthenticated, function(req, res){
 
 // TODO: check if the incident is valid
 app.post('/storeannotations', function(req, res) {
-    if (req.body.task && req.body.incident && req.body.annotations){
+    console.log("Storing request received from " + req.user.user);
+    if (req.body.task && req.body.incident){
         var task = req.body.task;
         var user = req.user.user;
+	var annotations = req.body.annotations || {};
         var rkey = task + ':' + user + ':ann:' + req.body.incident;
-        logAction(req.user.user, "UPDATE ANNOTATIONS, TASK=" + task);
-        client.set(rkey, JSON.stringify(req.body.annotations));
-        res.sendStatus(200);
+        client.set(rkey, JSON.stringify(annotations), function(err){
+	    if (!err){
+                logAction(req.user.user, "UPDATE ANNOTATIONS, TASK=" + task);
+                res.sendStatus(200);
+	    } else{
+                console.error("ERROR with REDIS storing by user " + user);
+                res.sendStatus(400);
+            }
+	});
     } else {
+        console.error("Storing of annotations: task or incident not specified - user " + req.user.user);
         res.sendStatus(400);//("Not OK: incident id not specified");
         //res.send("Not OK: incident id not specified, or no documents listed");
     }

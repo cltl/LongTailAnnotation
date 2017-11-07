@@ -177,6 +177,8 @@ var reloadInside=function(mwu=false){
 }
 
 var storeAndReload = function(annotations, mwu = false){
+    console.log("Storing annotations");
+    console.log(annotations);
     $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
         alert("Annotation saved. Now re-loading");
         //loadTextsFromFile($("#pickfile").val());
