@@ -179,13 +179,21 @@ var reloadInside=function(mwu=false){
 var storeAndReload = function(annotations, mwu = false){
     console.log("Storing annotations");
     console.log(annotations);
-    $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()}, function(data, status){
-        alert("Annotation saved. Now re-loading");
-        //loadTextsFromFile($("#pickfile").val());
+    $.post("/storeannotations", {'annotations': annotations, 'task': 'men', 'incident': $("#pickfile").val()})
+//, function() {
+    .done(function() {
+        alert( "Annotation saved. Now re-loading." );
         reloadInside(mwu);
         defaultValues();
         showTrails();
+    })
+    .fail(function() {
+        alert( "There was an error with storing these annotations" );
     });
+
+
+//function(data, status){
+//        alert("Annotation saved. Now re-loading, status code:");
 }
 
 var storeDisqAndReload = function(task){
