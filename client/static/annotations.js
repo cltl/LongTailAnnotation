@@ -388,6 +388,10 @@ var refTextsInfo = function(refTxts){
     $("#addedTxts").html("Manually added reference texts for this incident: " + refTxts.length.toString() + " (" + sources + ")");
 }
 
+function count_occurences(str, char_to_count){
+        return str.split(char_to_count).length - 1;
+}
+
 var getAllInfo = function(inc){
     $.get("/getincinfo", {'inc': inc}, function(data, status) {
         var d = JSON.parse(data);
@@ -398,10 +402,20 @@ var getAllInfo = function(inc){
             $(".datepicker").datepicker("update", '');
             if (str_anns){
                 $("#location").val(str_anns["location"]);
-                $('#pickday').datepicker("update", str_anns["time"]);//.datepicker('update');;
+                $("#participants").val(str_anns["participants"] || "");
+                var incTime = str_anns["time"];
+                if (incTime!=""){
+                    var numDashes = count_occurences(incTime, '-');
+                    console.log(numDashes);
+                    console.log(incTime);
+                    if (numDashes==2) $('#pickday').datepicker("update", incTime);
+                    else if (numDashes==1) $('#pickmonth').datepicker("update", incTime);
+                    else if (numDashes==0) $('#pickyear').datepicker("update", incTime);
+                }
             } else{
                 $("#location").val(d["estimated_location"]);
                 $('#pickday').datepicker("update", d["estimated_incident_date"]);//.datepicker('update');;
+                $("#participants").val("");
                 //$("#pickday").val(d["estimated_incident_date"]);
             }
 
@@ -498,7 +512,7 @@ var getAnnotatedDate=function(){
 }
 
 var saveStructuredAnnotation = function(){
-    var str_ann = {"time": getAnnotatedDate(), "location": $("#location").val()};
+    var str_ann = {"time": getAnnotatedDate(), "location": $("#location").val(), "participants": $("#participants").val()};
     $.post("/storeannotations", {'annotations': str_ann, 'task': 'str', 'incident': $("#pickfile").val()}, function(data, status){
         alert("Annotation saved. Now re-loading");
         location.reload();
