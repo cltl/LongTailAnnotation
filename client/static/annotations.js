@@ -338,8 +338,6 @@ var loadTextsFromFile = function(fn){
             if (!disq) header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\', \'" + task + "\')\">Mark non-relevant</button>";
             else header += "<button class=\"btn btn-primary\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(\'" + k + "\', \'" + task + "\')\">Mark relevant</button>";
 
-
-
 //            if (!disq) header += "<button class=\"btn btn-primary quabtn\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(" + k + ")\">Disqualify this document</button>";
 //            else header += "<button class=\"btn btn-primary disbtn\" id=\"btn" + k + "\" onclick=\"toggleDisqualify(" + k + ")\">Qualify this document</button>";
             header += "</h4></div>";
@@ -403,6 +401,7 @@ var getAllInfo = function(inc){
             if (str_anns){
                 $("#location").val(str_anns["location"]);
                 $("#participants").val(str_anns["participants"] || "");
+                $("#numparticipants").val(str_anns["numparticipants"] || 0);
                 var incTime = str_anns["time"];
                 if (incTime!=""){
                     var numDashes = count_occurences(incTime, '-');
@@ -416,6 +415,7 @@ var getAllInfo = function(inc){
                 $("#location").val(d["estimated_location"]);
                 $('#pickday').datepicker("update", d["estimated_incident_date"]);//.datepicker('update');;
                 $("#participants").val("");
+                $("#numparticipants").val(0);
                 //$("#pickday").val(d["estimated_incident_date"]);
             }
 
@@ -436,7 +436,7 @@ var getAllInfo = function(inc){
                 else header += "<button class=\"btn btn-primary\" id=\"btn" + doc_id + "\" onclick=\"toggleDisqualify(\'" + doc_id + "\', \'" + task + "\')\">Mark relevant</button>";
                 header += "</h4></div>";
                 body = "<div class=\"panel-body\">" + article['body'] + "</div>";
-                allHtml += header + body;
+                allHtml += header + body + "</div>";
             }
             $("#pnlLeft").html(allHtml);
             refTextsInfo(refTxts);
@@ -512,7 +512,7 @@ var getAnnotatedDate=function(){
 }
 
 var saveStructuredAnnotation = function(){
-    var str_ann = {"time": getAnnotatedDate(), "location": $("#location").val(), "participants": $("#participants").val()};
+    var str_ann = {"time": getAnnotatedDate(), "location": $("#location").val(), "participants": $("#participants").val(), "numparticipants": $("#numparticipants").val()};
     $.post("/storeannotations", {'annotations': str_ann, 'task': 'str', 'incident': $("#pickfile").val()}, function(data, status){
         alert("Annotation saved. Now re-loading");
         location.reload();
