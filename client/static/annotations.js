@@ -488,7 +488,8 @@ var showTrails = function(){
 // Load incident - both for mention and structured annotation
 var loadIncident = function(task){
     var inc = $("#pickfile").val();
-    if (inc!="-1"){
+if (inc!="-1"){
+        $("#incid").html(inc);
         //$("#annotation").show();
         $("#infoMessage").html("");
         $(".ann-input").show();
