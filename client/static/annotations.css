@@ -96,6 +96,11 @@ label.inactive {
     background: #808000;
 }
 
+.lexsupport {
+    color: #fff;
+    background: #000;
+}
+
 .good_info {
     color: #0f0;
 }

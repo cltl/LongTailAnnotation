@@ -1,3 +1,7 @@
+var words_lex = ['accident', 'blast', 'blasted', 'blasting', 'blood', 'bodies', 'body', 'condition', 'condition', 'crossfire', 'dead', 'deadly', 'death', 'deceased', 'die', 'died', 'disabled', 'dying', 'fire', 'fired', 'firing', 'funeral', 'gunfire', 'gunman', 'gunned', 'gunshot', 'gunshots', 'harm', 'harmed', 'hit', 'hits', 'hitting', 'homicide', 'hospitalized', 'incident', 'incidents', 'injured', 'injuries', 'injuring', 'injury', 'lethal', 'lose', 'losing', 'loss', 'lost', 'manslaughter', 'missed', 'shot', 'slain', 'slaying', 'stabilized', 'striking', 'struck', 'swelling', 'tore', 'treated', 'treatment', 'trigger'];
+var patterns_lex = ['autops', 'bleed', 'collaps', 'damag', 'discharg', 'execut', 'fatal', 'kill', 'massacre', 'miss', 'murder', 'recover', 'shoot', 'succumb', 'suicid', 'surger', 'wound'];
+var mwus_lex = ['not revive', 'take life', 'turn the gun on', 'turned the gun on', 'turning the gun on', 'went off'];
+
 $(function(){
 
     disqualification = [];
@@ -206,7 +210,11 @@ var storeDisqAndReload = function(task){
 var removeAnnotations = function(){
     if ($("span.inactive").length>0){
     var allMentions = $(".inactive").map(function() {
-        return $(this).attr('id');
+        if ($(this).hasClass('lexsupport')){
+            $(this).removeClass('lexsupport');
+        }else{
+            return $(this).attr('id');
+        }
     }).get();
     for (var i=0; i<allMentions.length; i++){
         var k = allMentions[i];
@@ -289,7 +297,16 @@ var addToken = function(token, tid, annotated) {
     if (token=='NEWLINE') return '<br/>';
     else {
 	if (!annotated[tid]){
-	    return "<span id=" + tid + " class=\"clickable\">" + token + "</span> ";
+        if (words_lex.indexOf(token)!=-1){
+            return "<span id=" + tid + " class=\"unclickable lexsupport\">" + token + "</span> ";
+        } else {
+            for (var i in patterns_lex){
+                if (token.startsWith(patterns_lex[i])){
+                    return "<span id=" + tid + " class=\"unclickable lexsupport\">" + token + "</span> ";
+                }
+            }
+	        return "<span id=" + tid + " class=\"clickable\">" + token + "</span> ";
+        }
 	} else {
             var mwuClass="";
             if (annotated[tid]["mwu"]) mwuClass="mwu";
