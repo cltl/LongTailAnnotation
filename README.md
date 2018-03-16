@@ -3,4 +3,5 @@ Annotation tool for mention-level and structured data annotation of data extract
 
 ### Contact
 Filip Ilievski (f.ilievski@vu.nl)
+
 Vrije Universiteit Amsterdam
