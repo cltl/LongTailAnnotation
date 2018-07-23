@@ -1,3 +1,5 @@
+__pycache__/
+data/
 server_logs/
 annotations/
 test_data*/
