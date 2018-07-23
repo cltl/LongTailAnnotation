@@ -1,10 +1,12 @@
 __pycache__/
+*.json
+*.tsv
 data/
 server_logs/
 annotations/
 test_data*/
 *.bin
-data/
+data/*
 node_modules/
 dump.rdb
 client/logs

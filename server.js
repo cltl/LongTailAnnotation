@@ -62,7 +62,7 @@ app.get('/gettext', isAuthenticated, function(req, res){
     var doc = '';
     client.get('incque:' + incident, function(err, reply){
         if (!err) doc=JSON.parse(reply)[0];
-        var filename = 'test_data2/CONLL/' + doc + '.conll';
+        var filename = '../AnnotatingEntityProfiles/test_data2/CONLL/' + doc + '.conll';
         var edges = fs.readFileSync(filename, 'utf-8')
         .split('\n')
         .filter(Boolean);
