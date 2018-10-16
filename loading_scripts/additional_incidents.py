@@ -12,7 +12,7 @@ def build_inc2que():
     my_index = defaultdict(set)
     subtasks=['1','2','3']
     for s in subtasks:
-        with open('../AnnotatingEntityProfiles/test_data2/%s_answers.json' % s, 'r') as infile:
+        with open('../../AnnotatingEntityProfiles/test_data2/%s_answers.json' % s, 'r') as infile:
             answers=json.load(infile)
             for q_id in answers.keys():
                 incs = answers[q_id]["answer_docs"].keys()
@@ -42,7 +42,7 @@ too_many_part=0
 to_save=set()
 MAX_PARTICIPANTS=10
 
-with open('../LongTailQATask/Evaluation/package_test_data/test_data/input/s1/docs.conll', 'r') as my_f:
+with open('../../LongTailQATask/Evaluation/package_test_data/test_data/input/s1/docs.conll', 'r') as my_f:
     my_file=my_f.read()
     with open('rows_to_store.json', 'r') as rows_file:
         rows=json.load(rows_file)

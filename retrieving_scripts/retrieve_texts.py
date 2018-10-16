@@ -5,7 +5,7 @@ r=redis.Redis()
 
 users={"marten", "filip"}
 
-out_path = '../LongTailQATask/QuestionCreation/ref_texts.json'
+out_path = '../../LongTailQATask/QuestionCreation/ref_texts.json'
 out_json = {}
 
 for user in users:

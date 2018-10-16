@@ -6,7 +6,7 @@ r=redis.Redis()
 users={"marten", "filip"}
 
 #out_path = '../LongTailQATask/QuestionCreation/ref_texts.json'
-out_path = 'bu_original.json'
+out_path = '../bu_original.json'
 out_json = {}
 
 pattern="incinitstr:BU*"
