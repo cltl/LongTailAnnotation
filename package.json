@@ -4,8 +4,8 @@
   "description": "long tail annotation tool for events",
   "main": "event.js",
   "scripts": {
-    "test": "node server.js",
-    "start": "node server.js"
+    "test": "node event.js",
+    "start": "node event.js"
   },
   "repository": {
     "type": "git",
