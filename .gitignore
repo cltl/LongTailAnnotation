@@ -1,5 +1,6 @@
 __pycache__/
-*.json
+bu_original.json
+rows_to_store.json
 *.tsv
 data/
 server_logs/

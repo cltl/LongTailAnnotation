@@ -1,0 +1,30 @@
+{
+  "name": "long-tail-annotation",
+  "version": "1.0.0",
+  "description": "long tail annotation tool for events",
+  "main": "event.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cltl/LongTailAnnotation.git"
+  },
+  "author": "Filip Ilievski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cltl/LongTailAnnotation/issues"
+  },
+  "homepage": "https://github.com/cltl/LongTailAnnotation#readme",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.7.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "redis": "^2.8.0"
+  }
+}
