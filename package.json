@@ -4,7 +4,8 @@
   "description": "long tail annotation tool for events",
   "main": "event.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
