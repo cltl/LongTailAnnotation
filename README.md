@@ -7,7 +7,7 @@ To install all the needed packages, please run `npm install`. This will install 
 
 ### Starting the server
 
-To start the server, simply run `node server.js` or `npm start`.
+To start the server, simply run `node event.js` or `npm start`.
 
 
 ### Contact
